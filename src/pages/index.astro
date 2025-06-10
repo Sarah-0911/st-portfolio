@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import IntroCard from '../components/sections/IntroCard.astro'
 import AboutMe from '../components/sections/AboutMe.astro'
 import Card from '../components/Card.astro'
-import TimeZoneCard from '../components/sections/TimeZoneCard.astro'
+import GoalCard from '../components/sections/GoalCard.astro'
 import ContactsCard from '../components/sections/ContactsCard.astro'
 import Now from '../components/sections/Now.astro'
 import CVCard from '../components/sections/CVCard.astro'
@@ -38,8 +38,8 @@ import StudyCard from '../components/sections/StudyCard.astro'
 </script>
 
 <BaseLayout
-  title="Andrés Plaza - Full Stack Developer"
-  description="Andrés Plaza - Full Stack Developer - Portfolio, Projects, CV, About Me, Contact, Timezone, Now, Experience, Tattoo, Study"
+  title="Sarah Tabet - Développeuse front-end"
+  description="Sarah Tabet - Développeuse front-end - Portfolio, Projects, CV, About Me, Contact, Timezone, Now, Experience, Tattoo, Study"
 >
   <div
     slot="loader"
@@ -52,14 +52,15 @@ import StudyCard from '../components/sections/StudyCard.astro'
     <IntroCard />
     <AboutMe />
     <CVCard />
+    <GoalCard />
     <Now />
     <Card
       colSpan="md:col-span-1"
       rowSpan="md:row-span-2"
-      title="Portfolio & Projects"
+      title="Mes Projets"
+      body="Découvrez mes projets(...)"
       href="/portfolio"
     />
-    <TimeZoneCard />
     <ContactsCard />
     <ExperienceCard />
     <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
@@ -70,7 +71,7 @@ import StudyCard from '../components/sections/StudyCard.astro'
         <p class="mt-2 text-xs">- Jules Verne</p>
       </div>
     </Card>
-    <TattooCard />
+    <!-- <TattooCard /> -->
     <StudyCard />
     <!-- <Card colSpan="md:col-span-1" rowSpan="md:row-span-1">
       <p class="text-xs">

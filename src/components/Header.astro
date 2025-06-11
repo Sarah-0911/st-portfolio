@@ -23,13 +23,14 @@ import { ModeToggle } from '../components/ui/ThemeToggle'
   <div
     class="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0"
   >
-    <div class="flex gap-6 md:gap-10">
+    <div class="flex gap-6 md:gap-10 w-14 h-14 md:w-20 md:h-20 items-center justify-center">
       <a href="/" class="flex items-center space-x-2">
-        <span class="inline-block font-bold">Sarah T.</span>
+        <img src="/images/logo.png" alt="Logo">
       </a>
     </div>
     <div class="flex flex-1 items-center justify-end space-x-4">
-      <nav class="flex items-center space-x-1">
+      <nav class="flex items-center space-x-1 gap-8">
+        <a href="/portfolio"><span> Mes Projets</span></a>
         <ModeToggle transition:persist client:load />
       </nav>
     </div>

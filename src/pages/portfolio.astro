@@ -12,14 +12,16 @@ import { PROJECTS } from '../lib/constants'
 >
   <main class="flex min-h-[80vh] flex-auto flex-col" transition:animate="slide">
     <TopLayout>
-      <h2
-        class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0"
-      >
-        Projects and clone's
+      <h2 class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-center">
+        Projets web & mobile
       </h2>
+      <p class="text-muted-foreground text-sm mt-4 max-w-xl text-center italic">
+       Certains projets ne sont pas publics : Je les présente ici via visuels ou démonstrations.
+      </p>
+
     </TopLayout>
     <BottomLayout size="xl">
-      <div class="flex w-full flex-wrap justify-center gap-2">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 w-full justify-center gap-8">
         {PROJECTS.map((project) => (
           <ProjectCard
             heading={project.heading}

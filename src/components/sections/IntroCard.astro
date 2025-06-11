@@ -2,7 +2,8 @@
 import Card from '../Card.astro'
 import { Button } from '../ui/button'
 import { LINKS } from '../../lib/constants'
-import { Linkedin, Github, Mail } from 'lucide-react'
+import { Linkedin, Github, Mail, Smile } from 'lucide-react'
+import Tooltip from '../Tooltip.astro'
 ---
 
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
@@ -10,10 +11,10 @@ import { Linkedin, Github, Mail } from 'lucide-react'
     <div class="flex flex-col gap-4 md:max-h-[300px]">
       <div class="flex h-full flex-col flex-1 mt-4">
         <div class="border-b pb-2 border-gray-500">
-          <h2 class="mb-4 text-4xl">Sarah Tabet</h2>
-          <p>Développeuse Front-End</p>
+          <h2 class="mb-4 text-6xl">Sarah Tabet</h2>
+          <p class="mb-4 text-4xl">Développeuse Front-End</p>
         </div>
-        <div class="mt-8">
+        <div class="mt-8 text-lg">
           <p>Créativité | Qualité | Précision</p>
         </div>
       </div>
@@ -36,11 +37,12 @@ import { Linkedin, Github, Mail } from 'lucide-react'
             <span class="sr-only">Contact email</span>
           </Button>
         </a>
+        <Tooltip>
           <Button>
-            <!-- <Mail /> -->
-            😎
-            <span class="sr-only">Surprise</span>
+            <Smile />
+            <span class="sr-only">Easter Egg</span>
           </Button>
+        </Tooltip>
       </div>
     </div>
     <img

@@ -1,4 +1,5 @@
 ---
+// filepath: /home/sarah/code/Sarah-0911/st-portfolio/src/components/Tooltip.astro
 const messages = [
   "Hi there!",
   "Clicked again?",
@@ -23,25 +24,17 @@ const messages = [
   "Stop, please!",
   "Okay, last one!",
   "That's it, I'm done!",
-]
+];
 ---
-<span class="relative inline-block">
-  <button id="easter-egg-btn" type="button">
-    <slot />
-  </button>
-  <span
-    id="easter-egg-tooltip"
-    class="absolute left-1/2 -translate-x-1/2 -translate-y-10 mt-1 w-auto max-h-[70px] p-2 bg-black text-white text-center rounded-lg z-10 shadow-custom shadow-primary-500 border border-primary-500 whitespace-normal"
-    style="display: none;"
-  >
-    {messages[0]}
-  </span>
-  <script type="module">
-    let clickCount = 0;
-    const btn = document.getElementById('easter-egg-btn');
-    const tooltip = document.getElementById('easter-egg-tooltip');
-    if (btn && tooltip) {
+<script is:inline>
+  // Ce script s'exécute pour chaque instance du composant
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.tooltip-easter-egg').forEach((el) => {
+      const btn = el.querySelector('.tooltip-btn');
+      const tooltip = el.querySelector('.tooltip-msg');
+      let clickCount = 0;
       btn.addEventListener('click', () => {
+        console.log('Button clicked');
         clickCount++;
         tooltip.style.display = 'block';
         tooltip.textContent = messages[Math.min(clickCount, messages.length - 1)];
@@ -49,6 +42,18 @@ const messages = [
           tooltip.style.display = 'none';
         }, 1500);
       });
-    }
-  </script>
-</span>
+    });
+  });
+</script>
+
+<div class="relative inline-block tooltip-easter-egg">
+  <div class="tooltip-btn" tabindex="0">
+    <slot />
+  </div>
+  <div
+    class="tooltip-msg absolute left-1/2 -translate-x-1/2 -translate-y-10 mt-1 w-auto max-h-[70px] p-2 bg-black text-white text-center rounded-lg z-10 shadow-custom shadow-primary-500 border border-primary-500 whitespace-normal"
+    style="display: none;"
+  >
+    {messages[0]}
+  </div>
+</div>

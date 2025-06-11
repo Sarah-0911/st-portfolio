@@ -1,15 +1,11 @@
 ---
 import Card from '../Card.astro'
 import { LINKS } from '../../lib/constants'
+
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-4">
-  <div class="h-full">
-    <header class="flex items-center">
-      <h1 class="text-xl font-bold text-foreground">
-        Travaillons ensemble!
-      </h1>
-    </header>
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-4" title="Travaillons ensemble!">
+<div class="h-full">
     <address class="mt-4 flex flex-col">
       <h2 class="text-gray-500">Details de contact</h2>
       <p>sarah.tabet69@gmail.com</p>
@@ -25,7 +21,7 @@ import { LINKS } from '../../lib/constants'
           <a href={LINKS.github} target="_blank">Github</a>
         </li>
         <li>
-          <a href={LINKS.discord} target="_blank">Discord</a>
+          <!-- <a href={LINKS.discord} target="_blank">Discord</a> -->
         </li>
       </ul>
     </div>

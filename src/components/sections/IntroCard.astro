@@ -8,26 +8,26 @@ import { Linkedin, Github, Mail } from 'lucide-react'
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
   <div class="flex h-full w-full justify-between">
     <div class="flex flex-col gap-4 md:max-h-[300px]">
-      <div class="flex h-full flex-col flex-1">
-        <h3 class="m-0 text-xl font-light">
-          Bonjour, je suis <b class="font-bold">Sarah</b> !
-        </h3>
-        <br/>
-        <p>💻 Développeuse Front-End | Passionnée et Créative</p>
-        <p>🌟 Conception d'interfaces web modernes et performantes</p>
-        <p>🎨 Expérience utilisateur fluide et intuitive | Qualité et Précision</p>
+      <div class="flex h-full flex-col flex-1 mt-4">
+        <div class="border-b pb-2 border-gray-500">
+          <h2 class="mb-4 text-4xl">Sarah Tabet</h2>
+          <p>Développeuse Front-End</p>
+        </div>
+        <div class="mt-8">
+          <p>Créativité | Qualité | Précision</p>
+        </div>
       </div>
       <div class="flex gap-4">
-        <a href={LINKS.github} aria-label="github profile" target="_blank">
-          <Button aria-label="github profile">
-            <Github />
-            <span class="sr-only">GitHub Profile</span>
-          </Button>
-        </a>
         <a href={LINKS.linkedin} aria-label="linkeding profile" target="_blank">
           <Button aria-label="linkedin profile">
             <Linkedin />
             <span class="sr-only">Linkedin Profile</span>
+          </Button>
+        </a>
+        <a href={LINKS.github} aria-label="github profile" target="_blank">
+          <Button aria-label="github profile">
+            <Github />
+            <span class="sr-only">GitHub Profile</span>
           </Button>
         </a>
         <a href={LINKS.mail} aria-label="mail profile" target="_blank">

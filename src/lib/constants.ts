@@ -22,7 +22,19 @@ export const SITE: Site = {
 }
 
 // Projects Page
-export const PROJECTS: Page = {
-  TITLE: 'Projects',
-  DESCRIPTION: 'Recent projects I have worked on.',
-}
+export const PROJECTS = [
+  {
+    heading: 'Clone Netflix',
+    subheading: 'React, TMDB API',
+    imagePath: '/images/netflix-clone.jpg',
+    altText: 'Aperçu du clone Netflix',
+    href: 'https://github.com/Sarah-0911/netflix-clone',
+  },
+  {
+    heading: 'Portfolio V1',
+    subheading: 'Astro, Tailwind',
+    imagePath: '/images/portfolio-v1.jpg',
+    altText: 'Aperçu du portfolio V1',
+    href: 'https://github.com/Sarah-0911/portfolio-v1',
+  },
+];

@@ -5,14 +5,14 @@ const messages = [
   "Encore un clic?",
   "Toujours là?",
   "Quelle persévérance!",
-  "Pourquoi donc?",
   "Encore? Vraiment?",
+  "Pourquoi donc?",
   "Quelle curiosité!",
-  "Pas sympa!",
   "Une petite pause?",
+  "Pas très sympa!",
   "C'est agaçant!",
-  "Bas les pattes!",
   "Assez cliqué!",
+  "Bas les pattes!",
   "Sérieusement?!",
   "Aïe, ça fait mal!",
   "Quelle ténacité!",
@@ -30,20 +30,24 @@ export default function Tooltip({ children }) {
   const [visible, setVisible] = useState(false);
   const [count, setCount] = useState(0);
 
-  const toggle = () => {
-    setVisible(!visible);
-    if (!visible) setCount(prev => prev + 1);
+   const handleMouseDown = () => {
+    setVisible(true);
+  };
+
+  const handleMouseUp = () => {
+    setVisible(false);
+    setCount(prev => prev + 1);
   };
 
   const message = messages[Math.min(count, messages.length - 1)];
 
   return (
     <div
-    className="relative inline-block"
-    onMouseDown={toggle}
-    onMouseUp={() => setVisible(false)}
-    onTouchStart={toggle}
-    onTouchEnd={() => setVisible(false)}
+      className="relative inline-block"
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onTouchStart={handleMouseDown}
+      onTouchEnd={handleMouseUp}
     >
       {children}
       {visible && (

@@ -3,23 +3,25 @@ import { ProjectModal } from './ProjectModal';
 import { Card as ShadcnCard } from './ui/card';
 import { createPortal } from 'react-dom';
 
+type ProjectCardProps = {
+  as?: keyof JSX.IntrinsicElements;
+  className?: string;
+  href?: string;
+  heading: string;
+  subheading: string;
+  images: string[];
+  altText: string;
+};
+
 const ProjectCard = ({
   as: Tag = 'a',
   className,
   href,
   heading,
   subheading,
-  imagePath,
+  images,
   altText,
-}: {
-  as?: keyof JSX.IntrinsicElements;
-  className?: string;
-  href?: string;
-  heading: string;
-  subheading: string;
-  imagePath: string;
-  altText: string;
-}) => {
+}: ProjectCardProps) => {
   const [modalOpen, setModalOpen] = useState(false);
 
   const handleClick = (e: React.MouseEvent) => {
@@ -39,7 +41,7 @@ const ProjectCard = ({
             }`}
           >
             <img
-              src={imagePath}
+              src={images[0]}
               alt={altText}
               className="h-60 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
               loading="eager"
@@ -54,10 +56,7 @@ const ProjectCard = ({
         </Tag>
       </div>
 
-      {modalOpen && createPortal(<ProjectModal onClose={() => setModalOpen(false)} title={heading}>
-        <img src={imagePath} alt={altText} className="w-full rounded-lg" />
-        <p className="mt-4 text-center">{subheading}</p>
-      </ProjectModal>, document.getElementById('modal-root') || document.body)
+      {modalOpen && createPortal(<ProjectModal onClose={() => setModalOpen(false)} title={heading} images={images} altText={altText} subheading={subheading} />, document.getElementById('modal-root') || document.body)
       }
     </>
   );

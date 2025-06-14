@@ -9,12 +9,12 @@ const ImageGallery = ({ images, altText = 'Projet' }: ImageGalleryProps) => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
-    <div className="flex flex-col gap-4 w-1/2">
+    <div className="flex flex-col gap-4">
       {/* Image principale */}
       <img
         src={images[selectedIndex]}
         alt={`${altText} ${selectedIndex + 1}`}
-        className="w-full rounded-lg object-cover"
+        className="w-full h-60 rounded-lg object-cover"
       />
 
       {/* Miniatures */}

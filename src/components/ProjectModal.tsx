@@ -19,13 +19,24 @@ export function ProjectModal({ onClose, title, images, altText, description }: P
       aria-labelledby="modal-title"
     >
       <div
-        className="relative bg-white rounded-lg shadow-lg p-6 m-4 max-w-lg w-full"
+        className="relative bg-white rounded-lg shadow-lg p-6 m-4 max-w-3xl"
         onClick={e => e.stopPropagation()}
       >
         <h2 id="modal-title" className="text-xl font-semibold mb-4">{title}</h2>
-        <div className="flex">
+        <div className="flex gap-6">
           <ImageGallery images={images} altText={altText} />
-          <p className="mt-4 text-center">{description}</p>
+          <div>
+            <p className="">{description}</p>
+            <h3 className="mt-2 mb-1 font-semibold">Technologies</h3>
+            <p>React, Tailwind</p>
+            <h3 className="mt-2 mb-1 font-semibold">Fonctionnalités</h3>
+            <ul className="list-disc list-inside">
+              <li>Design responsive</li>
+              <li>Mode sombre</li>
+              <li>Animations personnalisées</li>
+            </ul>
+            <button className="mt-2 border border-slate-600">Voir le site</button>
+          </div>
         </div>
         <button
           onClick={onClose}

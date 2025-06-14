@@ -24,14 +24,30 @@ const ProjectCard = ({
   altText,
   description,
 }: ProjectCardProps) => {
-  const [modalOpen, setModalOpen] = useState(false);
 
-  const handleClick = (e: React.MouseEvent) => {
-    if (href) {
-      e.preventDefault(); // Empêche la navigation
-    }
+  const [modalOpen, setModalOpen] = useState(false);
+  const [isPreloading, setIsPreloading] = useState(true);
+
+const handleClick = (e: React.MouseEvent) => {
+  if (href) e.preventDefault();
+
+  setIsPreloading(true);
+
+  Promise.all(
+    images.map(
+      (src) =>
+        new Promise<void>((resolve, reject) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = () => resolve();
+          img.onerror = () => resolve(); // ou reject() si je veux bloquer
+        })
+    )
+  ).then(() => {
+    setIsPreloading(false);
     setModalOpen(true);
-  };
+  });
+};
 
   return (
     <>

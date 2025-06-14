@@ -19,12 +19,14 @@ export function ProjectModal({ onClose, title, images, altText, description }: P
       aria-labelledby="modal-title"
     >
       <div
-        className="relative bg-white rounded-lg shadow-lg p-6 m-4 max-w-3xl"
+        className="relative bg-white rounded-lg shadow-lg p-4 md:p-6 m-4 max-w-3xl"
         onClick={e => e.stopPropagation()}
       >
         <h2 id="modal-title" className="text-xl font-semibold mb-4">{title}</h2>
-        <div className="flex gap-6">
-          <ImageGallery images={images} altText={altText} />
+        <div className="flex flex-col md:flex-row gap-6">
+            <div className="md:w-1/2 w-full">
+              <ImageGallery images={images} altText={altText} />
+            </div>
           <div>
             <p className="">{description}</p>
             <h3 className="mt-2 mb-1 font-semibold">Technologies</h3>

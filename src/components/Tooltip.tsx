@@ -26,7 +26,7 @@ const messages = [
   "C'est bon, j'arrête là!",
 ];
 
-export default function Tooltip({ children }) {
+export default function Tooltip({ children } : { children: React.ReactNode }) {
   const [visible, setVisible] = useState(false);
   const [count, setCount] = useState(0);
 

@@ -13,7 +13,7 @@ interface Props {
 const { title, description, ogImage } = Astro.props
 ---
 
-<html lang="en">
+<html lang="fr">
   <head>
     <HeadSEO title={title} description={description} ogImage={ogImage} />
     <ViewTransitions />
@@ -24,5 +24,6 @@ const { title, description, ogImage } = Astro.props
       <slot />
       <Footer />
     </div>
+    <div id="modal-root"></div>
   </body>
 </html>

@@ -24,10 +24,10 @@ export const SITE: Site = {
 // Projects Page
 export const PROJECTS = [
   {
-    heading: 'Clone Netflix',
-    subheading: 'React, TMDB API',
-    imagePath: '/images/sad_cat.jpg',
-    altText: 'Aperçu du clone Netflix',
+    heading: 'Otour2',
+    subheading: 'Refonte d\'un site de e-commerce d\'après une maquette Figma.',
+    imagePath: '/images/projet-1.png',
+    altText: 'Aperçu du site Otour2',
     href: 'https://www.otour2.com/',
   },
   {

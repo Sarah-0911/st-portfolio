@@ -4,13 +4,13 @@ const messages = [
   "Bonjour!",
   "Encore un clic?",
   "Toujours là?",
-  "Quelle persévérance!",
+  "Vous êtes persistant!",
   "Encore? Vraiment?",
-  "Pourquoi donc?",
   "Quelle curiosité!",
+  "Pourquoi donc?",
+  "C'est agaçant!",
   "Une petite pause?",
   "Pas très sympa!",
-  "C'est agaçant!",
   "Assez cliqué!",
   "Bas les pattes!",
   "Sérieusement?!",
@@ -52,7 +52,7 @@ export default function Tooltip({ children }) {
       {children}
       {visible && (
         <div
-        className="absolute left-1/2 -translate-x-1/2 -translate-y-24 mt-1 p-2 bg-black text-white text-center rounded-lg z-10 shadow-lg border border-white text-sm"
+        className="inline-block text-center absolute left-1/2 -translate-x-1/2 -translate-y-[52px] mt-1 p-2 bg-black whitespace-nowrap text-white rounded-sm z-10 shadow-lg text-sm after:content-[''] after:block after:rotate-45 after:w-4 after:h-4 after:shadow-custom after:shadow-primary-500 after:absolute after:-bottom-2 after:-translate-x-1/2 after:left-1/2 after:bg-black after:z-20"
         role='tooltip'
         aria-hidden={!visible}>
           {message}
@@ -61,5 +61,3 @@ export default function Tooltip({ children }) {
     </div>
   );
 }
-
-// "absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-xs opacity-0 tooltip dark:bg-gray-700"

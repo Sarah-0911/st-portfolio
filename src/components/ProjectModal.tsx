@@ -1,3 +1,5 @@
+import ImageGallery from "./ImageGallery";
+
 type ProjectModalProps = {
   onClose: () => void;
   title: string;
@@ -21,12 +23,8 @@ export function ProjectModal({ onClose, title, images, altText, subheading }: Pr
         onClick={e => e.stopPropagation()}
       >
         <h2 id="modal-title" className="text-xl font-semibold mb-4">{title}</h2>
-        <div className="grid grid-cols-1 gap-4">
-          {images.map((src, index) => (
-            <img key={index} src={src} alt={`Project image ${index + 1}`} className="w-full rounded-lg" />
-          ))}
-        </div>
         <p className="mt-4 text-center">{subheading}</p>
+        <ImageGallery images={images} altText={altText} />
         <button
           onClick={onClose}
           className="absolute top-2 right-2 bg-red-600 text-white p-2 rounded hover:bg-red-700"

@@ -11,6 +11,7 @@ type ProjectCardProps = {
   subheading: string;
   images: string[];
   altText: string;
+  description: string;
 };
 
 const ProjectCard = ({
@@ -21,6 +22,7 @@ const ProjectCard = ({
   subheading,
   images,
   altText,
+  description,
 }: ProjectCardProps) => {
   const [modalOpen, setModalOpen] = useState(false);
 
@@ -56,7 +58,13 @@ const ProjectCard = ({
         </Tag>
       </div>
 
-      {modalOpen && createPortal(<ProjectModal onClose={() => setModalOpen(false)} title={heading} images={images} altText={altText} subheading={subheading} />, document.getElementById('modal-root') || document.body)
+      {modalOpen && createPortal(<ProjectModal
+        onClose={() => setModalOpen(false)}
+        title={heading}
+        images={images}
+        altText={altText}
+        description={description}
+        />, document.getElementById('modal-root') || document.body)
       }
     </>
   );

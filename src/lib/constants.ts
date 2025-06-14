@@ -26,6 +26,7 @@ export const PROJECTS = [
   {
     heading: 'Otour2',
     subheading: 'Refonte d\'un site de e-commerce d\'après une maquette Figma.',
+    description: 'Refonte d\'un site de e-commerce d\'après une maquette Figmablablabla.',
     images: [
       "/images/projects/project_1_main.png",
       "/images/sad_cat.jpg",
@@ -37,6 +38,7 @@ export const PROJECTS = [
   {
     heading: 'Portfolio V1',
     subheading: 'Astro, Tailwind',
+    description: 'Un portfolio construit avec Astro et Tailwind CSS.',
     images: [
       "/images/sad_cat.jpg",
       "/images/sad_cat.jpg",
@@ -48,6 +50,7 @@ export const PROJECTS = [
   {
     heading: 'Clone Netflix',
     subheading: 'React, TMDB API',
+    description: 'Un clone de Netflix utilisant React et l\'API TMDB.',
     images: [
       "/images/sad_cat.jpg",
       "/images/sad_cat.jpg",
@@ -59,6 +62,7 @@ export const PROJECTS = [
   {
     heading: 'Portfolio V1',
     subheading: 'Astro, Tailwind',
+    description: 'Un portfolio construit avec Astro et Tailwind CSS.',
     images: [
       "/images/sad_cat.jpg",
       "/images/sad_cat.jpg",
@@ -70,6 +74,7 @@ export const PROJECTS = [
   {
     heading: 'Portfolio V1',
     subheading: 'Astro, Tailwind',
+    description: 'Un portfolio construit avec Astro et Tailwind CSS.',
     images: [
       "/images/sad_cat.jpg",
       "/images/sad_cat.jpg",

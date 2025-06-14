@@ -3,12 +3,12 @@ import ImageGallery from "./ImageGallery";
 type ProjectModalProps = {
   onClose: () => void;
   title: string;
-  subheading: string;
+  description: string;
   altText: string;
   images: string[];
 };
 
-export function ProjectModal({ onClose, title, images, altText, subheading }: ProjectModalProps) {
+export function ProjectModal({ onClose, title, images, altText, description }: ProjectModalProps) {
 
   return (
     <div
@@ -23,8 +23,10 @@ export function ProjectModal({ onClose, title, images, altText, subheading }: Pr
         onClick={e => e.stopPropagation()}
       >
         <h2 id="modal-title" className="text-xl font-semibold mb-4">{title}</h2>
-        <p className="mt-4 text-center">{subheading}</p>
-        <ImageGallery images={images} altText={altText} />
+        <div className="flex">
+          <ImageGallery images={images} altText={altText} />
+          <p className="mt-4 text-center">{description}</p>
+        </div>
         <button
           onClick={onClose}
           className="absolute top-2 right-2 bg-red-600 text-white p-2 rounded hover:bg-red-700"

@@ -28,9 +28,9 @@ export const PROJECTS = [
     subheading: 'Astro, Tailwind',
     description: 'Un portfolio construit avec Astro et Tailwind CSS.',
     images: [
+      "/images/projects/wl_main.png",
       "/images/projects/wl_thumbnail_1.png",
-      "/images/sad_cat.jpg",
-      "/images/sad_cat.jpg",
+      "/images/projects/wl_thumbnail_2.png",
     ],
     altText: 'Aperçu du site Wonderlive',
     // href: 'https://www.otour2.com/',

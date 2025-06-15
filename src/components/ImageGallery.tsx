@@ -10,9 +10,21 @@ type ImageGalleryProps = {
 const ImageGallery = ({ images, altText = 'Projet' }: ImageGalleryProps) => {
 
   const [selectedIndex, setSelectedIndex] = useState(0);
-    const [zoomed, setZoomed] = useState(false);
+  const [zoomed, setZoomed] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
 
-  const toggleZoom = () => setZoomed(!zoomed);
+  const openZoom = () => {
+    setZoomed(true);
+  };
+
+  const closeZoom = () => {
+    setIsClosing(true);
+    // Attendre que l'animation de fermeture se termine (300ms) avant de démonter
+    setTimeout(() => {
+      setZoomed(false);
+      setIsClosing(false);
+    }, 300);
+  };
 
   return (
     <>
@@ -22,7 +34,7 @@ const ImageGallery = ({ images, altText = 'Projet' }: ImageGalleryProps) => {
         src={images[selectedIndex]}
         alt={`${altText} ${selectedIndex + 1}`}
         className="w-full h-60 rounded-lg object-cover cursor-zoom-in"
-        onClick={toggleZoom}
+        onClick={openZoom}
       />
 
       {/* Miniatures */}
@@ -49,13 +61,13 @@ const ImageGallery = ({ images, altText = 'Projet' }: ImageGalleryProps) => {
     {zoomed &&
       createPortal(
         <div
-          className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50"
-          onClick={toggleZoom}
+          className={`fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 transition-opacity duration-300 ${isClosing ? 'animate-fadeOut' : 'animate-fadeIn'}`}
+          onClick={closeZoom}
         >
           <img
             src={images[selectedIndex]}
             alt={`${altText} zoom`}
-            className="max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg cursor-zoom-out"
+            className={`max-h-[90vh] max-w-[90vw] rounded-lg shadow-lg cursor-zoom-out transform ${isClosing ? 'animate-zoomOut' : 'animate-zoomIn'}`}
           />
         </div>,
         document.getElementById('modal-root') || document.body

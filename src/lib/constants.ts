@@ -33,7 +33,7 @@ export const PROJECTS = [
       "/images/projects/wl_thumbnail_2.png",
     ],
     altText: 'Aperçu du site Wonderlive',
-    // href: 'https://www.otour2.com/',
+    href: 'https://wonderlive.io/',
   },
   {
     heading: 'Otour2',

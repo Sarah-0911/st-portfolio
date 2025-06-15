@@ -24,6 +24,18 @@ export const SITE: Site = {
 // Projects Page
 export const PROJECTS = [
   {
+    heading: 'Wonderlive',
+    subheading: 'Astro, Tailwind',
+    description: 'Un portfolio construit avec Astro et Tailwind CSS.',
+    images: [
+      "/images/projects/wl_thumbnail_1.png",
+      "/images/sad_cat.jpg",
+      "/images/sad_cat.jpg",
+    ],
+    altText: 'Aperçu du site Wonderlive',
+    // href: 'https://www.otour2.com/',
+  },
+  {
     heading: 'Otour2',
     subheading: 'Refonte d\'un site de e-commerce d\'après une maquette Figma.',
     description: 'Refonte d\'un site de e-commerce d\'après une maquette Figmablablabla.',
@@ -34,18 +46,6 @@ export const PROJECTS = [
     ],
     altText: 'Aperçu du site Otour2',
     href: 'https://www.otour2.com/',
-  },
-  {
-    heading: 'Portfolio V1',
-    subheading: 'Astro, Tailwind',
-    description: 'Un portfolio construit avec Astro et Tailwind CSS.',
-    images: [
-      "/images/sad_cat.jpg",
-      "/images/sad_cat.jpg",
-      "/images/sad_cat.jpg",
-    ],
-    altText: 'Aperçu du portfolio V1',
-    // href: 'https://www.otour2.com/',
   },
   {
     heading: 'Clone Netflix',

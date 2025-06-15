@@ -13,9 +13,10 @@ type ProjectModalProps = {
   description: string;
   altText: string;
   images: string[];
+  href: string;
 };
 
-export function ProjectModal({ onClose, title, images, altText, description }: ProjectModalProps) {
+export function ProjectModal({ onClose, title, images, altText, description, href }: ProjectModalProps) {
 
   return (
     <div
@@ -44,7 +45,11 @@ export function ProjectModal({ onClose, title, images, altText, description }: P
               <li>Mode sombre</li>
               <li>Animations personnalisées</li>
             </ul>
-            <button className="mt-2 border border-slate-600">Voir le site</button>
+            { href ? (
+              <a href={href} target="_blank" rel="noopener noreferrer" className="mt-2 border border-slate-600">
+                Voir le site
+              </a>
+            ) : ""}
           </div>
         </div>
         <button

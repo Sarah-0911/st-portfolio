@@ -28,7 +28,7 @@ export const PROJECTS = [
     subheading: 'Refonte d\'un site de e-commerce d\'après une maquette Figma.',
     description: 'Refonte d\'un site de e-commerce d\'après une maquette Figmablablabla.',
     images: [
-      "/images/projects/project_1_main.png",
+      "/images/projects/otour2_main.png",
       "/images/sad_cat.jpg",
       "/images/sad_cat.jpg",
     ],

@@ -15,7 +15,7 @@ type ProjectCardProps = {
 };
 
 const ProjectCard = ({
-  as: Tag = 'a',
+  // as: Tag = 'a',
   className,
   href,
   heading,
@@ -29,8 +29,6 @@ const ProjectCard = ({
   const [isPreloading, setIsPreloading] = useState(true);
 
 const handleClick = (e: React.MouseEvent) => {
-  if (href) e.preventDefault();
-
   setIsPreloading(true);
 
   Promise.all(
@@ -52,26 +50,22 @@ const handleClick = (e: React.MouseEvent) => {
   return (
     <>
       <div className="group hover:bg-slate-200 rounded-lg p-6">
-        <Tag href={href} className={className} style={{ cursor: 'pointer' }}>
-          <ShadcnCard
-            className={`transform-y-[-40%] align-start perspective-1200 group relative flex-none transform justify-start overflow-hidden shadow-lg transition duration-75 ease-in-out ${
-              href ? 'cursor-pointer hover:border-primary' : ''
-            }`}
-          >
-            <img
-              src={images[0]}
-              alt={altText}
-              className="h-60 w-full rounded-2xl rounded-bl-none rounded-br-none object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
-              loading="eager"
-              onClick={handleClick}
-            />
-            <slot />
-          </ShadcnCard>
-          <div className="flex flex-col gap-y-0.5 px-5 py-4 text-center">
-            <h1 className="text-xl font-medium mt-4 mb-2">{heading}</h1>
-            <h2 className="text-muted-foreground">{subheading}</h2>
-          </div>
-        </Tag>
+        <ShadcnCard
+          className="transform-y-[-40%] align-start perspective-1200 group relative flex-none transform justify-start shadow-lg transition duration-300 ease-in-out"
+        >
+          <img
+            src={images[0]}
+            alt={altText}
+            className="h-56 w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105 cursor-pointer rounded-md"
+            loading="eager"
+            onClick={handleClick}
+          />
+          <slot />
+        </ShadcnCard>
+        <div className="flex flex-col gap-y-0.5 px-5 py-4 text-center">
+          <h1 className="text-xl font-medium mt-4 mb-2">{heading}</h1>
+          <h2 className="text-muted-foreground">{subheading}</h2>
+        </div>
       </div>
 
       {modalOpen && createPortal(<ProjectModal
@@ -80,6 +74,7 @@ const handleClick = (e: React.MouseEvent) => {
         images={images}
         altText={altText}
         description={description}
+        href={href ?? ''}
         />, document.getElementById('modal-root') || document.body)
       }
     </>

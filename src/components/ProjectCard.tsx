@@ -27,6 +27,7 @@ const ProjectCard = ({
 
   const [modalOpen, setModalOpen] = useState(false);
   const [isPreloading, setIsPreloading] = useState(true);
+  const [isClosing, setIsClosing] = useState(false);
 
 const handleClick = (e: React.MouseEvent) => {
   setIsPreloading(true);
@@ -46,6 +47,14 @@ const handleClick = (e: React.MouseEvent) => {
     setModalOpen(true);
   });
 };
+
+  const closeModal = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      setModalOpen(false);
+      setIsClosing(false);
+    }, 300);
+  };
 
   return (
     <>
@@ -69,7 +78,8 @@ const handleClick = (e: React.MouseEvent) => {
       </div>
 
       {modalOpen && createPortal(<ProjectModal
-        onClose={() => setModalOpen(false)}
+        onClose={closeModal}
+        isClosing={isClosing}
         title={heading}
         images={images}
         altText={altText}

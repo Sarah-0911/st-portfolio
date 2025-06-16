@@ -1,14 +1,8 @@
 import ImageGallery from "./ImageGallery";
-// import { motion } from 'framer-motion';
-
-const modalVariants = {
-  hidden: { opacity: 0, scale: 0.95 },
-  visible: { opacity: 1, scale: 1, transition: { duration: 0.25 } },
-  exit: { opacity: 0, scale: 0.95, transition: { duration: 0.2 } },
-};
 
 type ProjectModalProps = {
   onClose: () => void;
+  isClosing: boolean;
   title: string;
   description: string;
   altText: string;
@@ -16,11 +10,11 @@ type ProjectModalProps = {
   href: string;
 };
 
-export function ProjectModal({ onClose, title, images, altText, description, href }: ProjectModalProps) {
+export function ProjectModal({ onClose, title, images, altText, description, href, isClosing }: ProjectModalProps) {
 
   return (
     <div
-      className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+      className={`fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 ${isClosing ? 'animate-fadeOut' : 'animate-fadeIn'}`}
       onClick={onClose}
       role="dialog"
       aria-modal="true"

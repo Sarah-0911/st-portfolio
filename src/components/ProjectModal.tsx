@@ -56,7 +56,7 @@ export function ProjectModal({ onClose, isClosing, project }: ProjectModalProps)
         </div>
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700 text-sm"
+          className="absolute top-2 right-2 bg-red-600 rounded-full text-white px-2 py-1 hover:bg-red-700 text-xs"
         >
           X
         </button>

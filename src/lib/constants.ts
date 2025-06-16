@@ -40,7 +40,7 @@ export const PROJECTS = [
     ],
     features: [
       "Intégration de modales dynamiques",
-      "Onboarding complet pour la marketplace",
+      "Onboarding complet de la marketplace",
       "Éditeur photo avec filtres et rognage",
       "Messagerie intégrée avec chat par conversation",
       "Architecture front propre et fidèle à la maquette Figma"
@@ -49,8 +49,8 @@ export const PROJECTS = [
   },
   {
     heading: 'Otour2',
-    subheading: 'Refonte d\'un site de e-commerce d\'après une maquette Figma.',
-    description: 'Refonte d\'un site de e-commerce d\'après une maquette Figmablablabla.',
+    subheading: 'Refonte front-end complète d\'un site e-commerce avec Tailwind CSS.',
+    description: 'Site e-commerce permettant de commander des emballages alimentaires personnalisés. L\'interface a été repensée pour une navigation plus moderne et intuitive.',
     images: [
       "/images/projects/otour2_main.png",
       "/images/sad_cat.jpg",
@@ -58,13 +58,15 @@ export const PROJECTS = [
     ],
     altText: 'Aperçu du site Otour2',
     technologies: [
-      "React Native",
-      "Expo",
+      "Tailwind CSS",
+      "JavaScript",
+      "Figma"
     ],
     features: [
-      "Design responsive",
-      "Mode sombre",
-      "Animations personnalisées",
+      "Reprise complète du front avec Tailwind CSS",
+      "Intégration pixel perfect à partir d'une maquette Figma",
+      "Implémentation de carrousels et slides en JavaScript",
+      "Refonte responsive à partir d'un site existant"
     ],
     href: 'https://www.otour2.com/',
   },

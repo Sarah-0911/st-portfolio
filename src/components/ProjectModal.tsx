@@ -29,21 +29,26 @@ export function ProjectModal({ onClose, isClosing, project }: ProjectModalProps)
               <ImageGallery images={images} altText={altText} />
             </div>
           <div>
-            <p className="">{description}</p>
-            <h3 className="mt-2 mb-1 font-semibold">Technologies</h3>
-            <ul className="flex gap-2">
+            <p className="text-sm mb-4">{description}</p>
+            <h3 className="mt-2 mb-1 text-sm md:text-base font-semibold">Technologies</h3>
+            <ul className="flex flex-wrap gap-2 text-xs md:text-sm">
               {technologies?.map((tech, index) => (
-                <li key={index}>{tech}</li>
+                <li key={index} className="border border-slate-300 rounded px-2 py-1">{tech}</li>
               ))}
             </ul>
-            <h3 className="mt-2 mb-1 font-semibold">Fonctionnalités</h3>
-            <ul className="list-disc list-inside">
+            <h3 className="mt-4 mb-1 text-sm md:text-base font-semibold">Ce que j'ai réalisé</h3>
+            <ul className="list-disc list-inside space-y-1 text-xs md:text-sm">
               {features?.map((feature, index) => (
                 <li key={index}>{feature}</li>
               ))}
             </ul>
             { href ? (
-              <a href={href} target="_blank" rel="noopener noreferrer" className="mt-2 border border-slate-600">
+              <a
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white text-xs md:text-sm rounded hover:bg-blue-700 transition-colors duration-200"
+              >
                 Voir le site
               </a>
             ) : ""}
@@ -51,7 +56,7 @@ export function ProjectModal({ onClose, isClosing, project }: ProjectModalProps)
         </div>
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 bg-red-600 text-white p-2 rounded hover:bg-red-700"
+          className="absolute top-2 right-2 bg-red-600 text-white px-2 py-1 rounded hover:bg-red-700 text-sm"
         >
           X
         </button>

@@ -21,26 +21,29 @@ export const SITE: Site = {
   AUTHOR: 'Mark Horn',
 }
 
-// Projects Page
+// Projects
 export const PROJECTS = [
   {
     heading: 'Wonderlive',
-    subheading: 'Astro, Tailwind',
-    description: 'Un portfolio construit avec Astro et Tailwind CSS.',
+    subheading: 'Développement front-end d\'une application mobile pour un réseau social basé sur la blockchain.',
+    description: 'Application mobile permettant aux utilisateurs de partager du contenu et d\'interagir sur un réseau social sécurisé, grâce à l\'intégration de la blockchain. Le projet est actuellement en phase de bêta-test.',
     images: [
       "/images/projects/wl_main.png",
       "/images/projects/wl_thumbnail_1.png",
       "/images/projects/wl_thumbnail_2.png",
     ],
-    altText: 'Aperçu du site Wonderlive',
+    altText: 'Aperçu de l\'application Wonderlive',
     technologies: [
       "React Native",
       "Expo",
+      "TypeScript"
     ],
     features: [
-      "Design responsive",
-      "Mode sombre",
-      "Animations personnalisées",
+      "Intégration de modales dynamiques",
+      "Onboarding complet pour la marketplace",
+      "Éditeur photo avec filtres et rognage",
+      "Messagerie intégrée avec chat par conversation",
+      "Architecture front propre et fidèle à la maquette Figma"
     ],
     href: 'https://wonderlive.io/',
   },

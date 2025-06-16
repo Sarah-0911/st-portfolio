@@ -137,20 +137,21 @@ export const PERSONAL_PROJECTS = [
     href: "https://boxy-generator-sigma.vercel.app/",
   },
   {
-    heading: "Recherche de restaurants",
-    subheading: "React & API Yelp.",
-    description: "Recherche et filtrage de restaurants selon lieu et type de cuisine.",
+    heading: "Ravenous",
+    subheading: "Site de recherche et filtrage de restaurants avec React et l'API Yelp.",
+    description: "Application web permettant aux utilisateurs de trouver des restaurants selon leur localisation et leurs préférences culinaires, avec filtrage dynamique et intégration complète de l'API Yelp.",
     images: [
       "/images/sad_cat.jpg",
     ],
-    altText: "...",
-    technologies: ["React", "API Yelp", "CSS"],
+    altText: "Aperçu du projet Ravenous",
+    technologies: ["React", "CSS", "Yelp API"],
     features: [
-      "Intégration API Yelp pour données en temps réel",
-      "Filtres multiples (localisation, type de nourriture)",
-      "Interface utilisateur claire et responsive"
+      "Recherche de restaurants par lieu et type de cuisine",
+      "Filtrage dynamique des résultats en temps réel",
+      "Intégration complète de l'API Yelp",
+      "Interface utilisateur réactive avec React"
     ],
-    href: "https://www.otour2.com/",
+    href: "https://react-ravenous-17c8d9ae06c1.herokuapp.com/",
   },
   {
     heading: "Recherche de musiques Spotify",

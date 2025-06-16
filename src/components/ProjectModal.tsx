@@ -25,10 +25,10 @@ export function ProjectModal({ onClose, isClosing, project }: ProjectModalProps)
       >
         <h2 id="modal-title" className="text-xl font-semibold mb-4">{heading}</h2>
         <div className="flex flex-col md:flex-row gap-6">
-            <div className="md:w-1/2 w-full">
+            <div className="md:w-[40%] w-full">
               <ImageGallery images={images} altText={altText} />
             </div>
-          <div>
+          <div className="md:w-[60%] w-full">
             <p className="text-sm mb-4">{description}</p>
             <h3 className="mt-2 mb-1 text-sm md:text-base font-semibold">Technologies</h3>
             <ul className="flex flex-wrap gap-2 text-xs md:text-sm">

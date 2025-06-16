@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import TopLayout from '../layouts/TopLayout.astro'
 import BottomLayout from '../layouts/BottomLayout.astro'
 import ProjectCard from '../components/ProjectCard'
-import { PROJECTS } from '../lib/constants'
+import { PROJECTS, PERSONAL_PROJECTS } from '../lib/constants'
 ---
 
 <BaseLayout
@@ -19,6 +19,20 @@ import { PROJECTS } from '../lib/constants'
     <BottomLayout size="xl">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 w-full justify-center">
         {PROJECTS.map((project) => (
+          <ProjectCard client:visible project={project} className="w-80" />
+        ))}
+      </div>
+    </BottomLayout>
+
+        {/* Section Projets personnels */}
+    <TopLayout>
+      <h2 class="scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight mt-12 text-center">
+        Projets personnels
+      </h2>
+    </TopLayout>
+    <BottomLayout size="lg">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 w-full justify-center">
+        {PERSONAL_PROJECTS.map((project) => (
           <ProjectCard client:visible project={project} className="w-80" />
         ))}
       </div>

@@ -116,25 +116,55 @@ export const PROJECTS = [
     ],
     href: 'https://hyteka.com/',
   },
+];
+
+export const PERSONAL_PROJECTS = [
   {
-    heading: 'Portfolio V1',
-    subheading: 'Astro, Tailwind',
-    description: 'Un portfolio construit avec Astro et Tailwind CSS.',
+    heading: "Générateur de box-shadow",
+    subheading: "React & Redux",
+    description: "Application pour créer des effets d'ombre CSS avec gestion avancée des états.",
     images: [
       "/images/sad_cat.jpg",
-      "/images/sad_cat.jpg",
-      "/images/sad_cat.jpg",
     ],
-    altText: 'Aperçu du portfolio V1',
-    technologies: [
-      "React Native",
-      "Expo",
-    ],
+    altText: "...",
+    technologies: ["React", "Redux", "CSS"],
     features: [
-      "Design responsive",
-      "Mode sombre",
-      "Animations personnalisées",
+      "Interface intuitive pour personnaliser les ombres",
+      "Gestion des états avec Redux",
+      "Export facile du code CSS généré"
     ],
-    // href: 'https://www.otour2.com/',
+    href: "https://www.otour2.com/",
   },
+  {
+    heading: "Recherche de restaurants",
+    subheading: "React & API Yelp",
+    description: "Recherche et filtrage de restaurants selon lieu et type de cuisine.",
+    images: [
+      "/images/sad_cat.jpg",
+    ],
+    altText: "...",
+    technologies: ["React", "API Yelp", "CSS"],
+    features: [
+      "Intégration API Yelp pour données en temps réel",
+      "Filtres multiples (localisation, type de nourriture)",
+      "Interface utilisateur claire et responsive"
+    ],
+    href: "https://www.otour2.com/",
+  },
+  {
+    heading: "Recherche de musiques Spotify",
+    subheading: "React & API Spotify",
+    description: "Outil pour trouver des musiques à ajouter à une playlist Spotify.",
+    images: [
+      "/images/sad_cat.jpg",
+    ],
+    altText: "...",
+    technologies: ["React", "API Spotify", "CSS"],
+    features: [
+      "Connexion à l\'API Spotify",
+      "Recherche avancée et recommandations",
+      "Interface fluide et responsive"
+    ],
+    href: "https://www.otour2.com/",
+  }
 ];

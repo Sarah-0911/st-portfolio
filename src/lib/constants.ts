@@ -33,6 +33,15 @@ export const PROJECTS = [
       "/images/projects/wl_thumbnail_2.png",
     ],
     altText: 'Aperçu du site Wonderlive',
+    technologies: [
+      "React Native",
+      "Expo",
+    ],
+    features: [
+      "Design responsive",
+      "Mode sombre",
+      "Animations personnalisées",
+    ],
     href: 'https://wonderlive.io/',
   },
   {
@@ -45,6 +54,15 @@ export const PROJECTS = [
       "/images/sad_cat.jpg",
     ],
     altText: 'Aperçu du site Otour2',
+    technologies: [
+      "React Native",
+      "Expo",
+    ],
+    features: [
+      "Design responsive",
+      "Mode sombre",
+      "Animations personnalisées",
+    ],
     href: 'https://www.otour2.com/',
   },
   {
@@ -57,6 +75,15 @@ export const PROJECTS = [
       "/images/sad_cat.jpg",
     ],
     altText: 'Aperçu du clone Netflix',
+    technologies: [
+      "React Native",
+      "Expo",
+    ],
+    features: [
+      "Design responsive",
+      "Mode sombre",
+      "Animations personnalisées",
+    ],
     href: 'https://www.otour2.com/',
   },
   {
@@ -69,6 +96,15 @@ export const PROJECTS = [
       "/images/sad_cat.jpg",
     ],
     altText: 'Aperçu du portfolio V1',
+    technologies: [
+      "React Native",
+      "Expo",
+    ],
+    features: [
+      "Design responsive",
+      "Mode sombre",
+      "Animations personnalisées",
+    ],
     // href: 'https://www.otour2.com/',
   },
   {
@@ -81,6 +117,15 @@ export const PROJECTS = [
       "/images/sad_cat.jpg",
     ],
     altText: 'Aperçu du portfolio V1',
+    technologies: [
+      "React Native",
+      "Expo",
+    ],
+    features: [
+      "Design responsive",
+      "Mode sombre",
+      "Animations personnalisées",
+    ],
     // href: 'https://www.otour2.com/',
   },
 ];

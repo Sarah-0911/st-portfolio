@@ -18,3 +18,14 @@ export type Socials = {
   TEXT: string
   HREF: string
 }[]
+
+export type Project = {
+  heading: string
+  subheading: string
+  description: string
+  images: string[]
+  altText: string
+  technologies: string[]
+  features: string[]
+  href?: string
+}

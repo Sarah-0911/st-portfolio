@@ -2,32 +2,20 @@ import React, { useState } from 'react';
 import { ProjectModal } from './ProjectModal';
 import { Card as ShadcnCard } from './ui/card';
 import { createPortal } from 'react-dom';
+import type { Project } from '../lib/types';
 
 type ProjectCardProps = {
-  as?: keyof JSX.IntrinsicElements;
+  project: Project;
   className?: string;
-  href?: string;
-  heading: string;
-  subheading: string;
-  images: string[];
-  altText: string;
-  description: string;
 };
 
-const ProjectCard = ({
-  // as: Tag = 'a',
-  className,
-  href,
-  heading,
-  subheading,
-  images,
-  altText,
-  description,
-}: ProjectCardProps) => {
+const ProjectCard = ({ project, className}: ProjectCardProps) => {
 
   const [modalOpen, setModalOpen] = useState(false);
   const [isPreloading, setIsPreloading] = useState(true);
   const [isClosing, setIsClosing] = useState(false);
+
+const { heading, subheading, images, altText } = project;
 
 const handleClick = (e: React.MouseEvent) => {
   setIsPreloading(true);
@@ -80,11 +68,7 @@ const handleClick = (e: React.MouseEvent) => {
       {modalOpen && createPortal(<ProjectModal
         onClose={closeModal}
         isClosing={isClosing}
-        title={heading}
-        images={images}
-        altText={altText}
-        description={description}
-        href={href ?? ''}
+        project={project}
         />, document.getElementById('modal-root') || document.body)
       }
     </>

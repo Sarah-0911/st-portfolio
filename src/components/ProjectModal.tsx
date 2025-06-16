@@ -1,16 +1,15 @@
 import ImageGallery from "./ImageGallery";
+import type { Project } from '../lib/types';
 
 type ProjectModalProps = {
   onClose: () => void;
   isClosing: boolean;
-  title: string;
-  description: string;
-  altText: string;
-  images: string[];
-  href: string;
+  project: Project;
 };
 
-export function ProjectModal({ onClose, title, images, altText, description, href, isClosing }: ProjectModalProps) {
+export function ProjectModal({ onClose, isClosing, project }: ProjectModalProps) {
+
+  const { heading, description, altText, images, technologies, features, href } = project;
 
   return (
     <div
@@ -24,7 +23,7 @@ export function ProjectModal({ onClose, title, images, altText, description, hre
         className="relative bg-white rounded-lg shadow-lg p-4 md:p-6 m-4 max-w-3xl"
         onClick={e => e.stopPropagation()}
       >
-        <h2 id="modal-title" className="text-xl font-semibold mb-4">{title}</h2>
+        <h2 id="modal-title" className="text-xl font-semibold mb-4">{heading}</h2>
         <div className="flex flex-col md:flex-row gap-6">
             <div className="md:w-1/2 w-full">
               <ImageGallery images={images} altText={altText} />
@@ -32,12 +31,16 @@ export function ProjectModal({ onClose, title, images, altText, description, hre
           <div>
             <p className="">{description}</p>
             <h3 className="mt-2 mb-1 font-semibold">Technologies</h3>
-            <p>React, Tailwind</p>
+            <ul className="flex gap-2">
+              {technologies?.map((tech, index) => (
+                <li key={index}>{tech}</li>
+              ))}
+            </ul>
             <h3 className="mt-2 mb-1 font-semibold">Fonctionnalités</h3>
             <ul className="list-disc list-inside">
-              <li>Design responsive</li>
-              <li>Mode sombre</li>
-              <li>Animations personnalisées</li>
+              {features?.map((feature, index) => (
+                <li key={index}>{feature}</li>
+              ))}
             </ul>
             { href ? (
               <a href={href} target="_blank" rel="noopener noreferrer" className="mt-2 border border-slate-600">

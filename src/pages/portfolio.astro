@@ -19,16 +19,7 @@ import { PROJECTS } from '../lib/constants'
     <BottomLayout size="xl">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 w-full justify-center">
         {PROJECTS.map((project) => (
-          <ProjectCard
-            client:visible
-            heading={project.heading}
-            subheading={project.subheading}
-            description={project.description}
-            images={project.images}
-            altText={project.altText}
-            href={project.href}
-            className="w-80"
-          />
+          <ProjectCard client:visible project={project} className="w-80" />
         ))}
       </div>
     </BottomLayout>

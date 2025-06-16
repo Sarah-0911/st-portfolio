@@ -109,10 +109,10 @@ export const PROJECTS = [
       "DevTools",
     ],
     features: [
-      "Création du logo et de l\'identité visuelle",
-      "Élaboration d\'un design system cohérent",
+      "Création du logo et de l'identité visuelle",
+      "Élaboration d'un design system cohérent",
       "Choix des polices et palette de couleurs",
-      "Optimisation de l\'expérience utilisateur",
+      "Optimisation de l'expérience utilisateur",
     ],
     href: 'https://hyteka.com/',
   },
@@ -120,24 +120,25 @@ export const PROJECTS = [
 
 export const PERSONAL_PROJECTS = [
   {
-    heading: "Générateur de box-shadow",
-    subheading: "React & Redux",
-    description: "Application pour créer des effets d'ombre CSS avec gestion avancée des états.",
+    heading: "Box Shadow Generator",
+    subheading: "Générateur d'ombres CSS personnalisées avec React et Redux.",
+    description: "Outil simple et intuitif pour créer des ombres CSS avec paramètres ajustables, pour des designs personnalisés.",
     images: [
       "/images/sad_cat.jpg",
     ],
-    altText: "...",
-    technologies: ["React", "Redux", "CSS"],
+    altText: "Aperçu du projet Box Shadow Generator",
+    technologies: ["React", "Redux", "Tailwind CSS", "Vite"],
     features: [
-      "Interface intuitive pour personnaliser les ombres",
-      "Gestion des états avec Redux",
-      "Export facile du code CSS généré"
+      "Interface intuitive pour modifier ombres et box",
+      "Ajout/suppression dynamique d'ombres",
+      "Gestion avancée des états avec Redux",
+      "Export rapide du code CSS généré"
     ],
-    href: "https://www.otour2.com/",
+    href: "https://boxy-generator-sigma.vercel.app/",
   },
   {
     heading: "Recherche de restaurants",
-    subheading: "React & API Yelp",
+    subheading: "React & API Yelp.",
     description: "Recherche et filtrage de restaurants selon lieu et type de cuisine.",
     images: [
       "/images/sad_cat.jpg",
@@ -153,7 +154,7 @@ export const PERSONAL_PROJECTS = [
   },
   {
     heading: "Recherche de musiques Spotify",
-    subheading: "React & API Spotify",
+    subheading: "React & API Spotify.",
     description: "Outil pour trouver des musiques à ajouter à une playlist Spotify.",
     images: [
       "/images/sad_cat.jpg",

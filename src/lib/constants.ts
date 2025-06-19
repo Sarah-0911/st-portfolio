@@ -120,13 +120,13 @@ export const PROJECTS = [
 
 export const PERSONAL_PROJECTS = [
   {
-    heading: "Box Shadow Generator",
+    heading: "Boxy Generator",
     subheading: "Générateur d'ombres CSS personnalisées avec React et Redux.",
     description: "Outil simple et intuitif pour créer des ombres CSS avec paramètres ajustables, pour des designs personnalisés.",
     images: [
       "/images/sad_cat.jpg",
     ],
-    altText: "Aperçu du projet Box Shadow Generator",
+    altText: "Aperçu du projet Boxy Generator",
     technologies: ["React", "Redux", "Tailwind CSS", "Vite"],
     features: [
       "Interface intuitive pour modifier ombres et box",
@@ -154,19 +154,19 @@ export const PERSONAL_PROJECTS = [
     href: "https://react-ravenous-17c8d9ae06c1.herokuapp.com/",
   },
   {
-    heading: "Recherche de musiques Spotify",
-    subheading: "React & API Spotify.",
-    description: "Outil pour trouver des musiques à ajouter à une playlist Spotify.",
+    heading: "Jammming",
+    subheading: "Application React intégrée à l'API Spotify avec authentification sécurisée.",
+    description: "Recherche de morceaux et création de playlists personnalisées via Spotify, avec gestion sécurisée et automatique des tokens OAuth et client credentials grâce à des fonctions serverless Netlify.",
     images: [
       "/images/sad_cat.jpg",
     ],
     altText: "...",
-    technologies: ["React", "API Spotify", "CSS"],
+    technologies: ["React", "Netlify Functions", "Spotify API", "OAuth 2.0"],
     features: [
       "Connexion à l\'API Spotify",
       "Recherche avancée et recommandations",
       "Interface fluide et responsive"
     ],
-    href: "https://www.otour2.com/",
+    href: "https://jammmingomusic.netlify.app/",
   }
 ];

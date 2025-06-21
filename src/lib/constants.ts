@@ -155,17 +155,19 @@ export const PERSONAL_PROJECTS = [
   },
   {
     heading: "Jammming",
-    subheading: "Application React intégrée à l'API Spotify avec authentification sécurisée.",
-    description: "Recherche de morceaux et création de playlists personnalisées via Spotify, avec gestion sécurisée et automatique des tokens OAuth et client credentials grâce à des fonctions serverless Netlify.",
+    subheading: "Application React connectée à l'API Spotify pour créer des playlists personnalisées.",
+    description: "Application web permettant de rechercher des morceaux et de créer des playlists personnalisées sur Spotify. L'authentification OAuth est gérée via des fonctions serverless déployées avec Netlify.",
     images: [
       "/images/sad_cat.jpg",
     ],
     altText: "...",
     technologies: ["React", "Netlify Functions", "Spotify API", "OAuth 2.0"],
     features: [
-      "Connexion à l\'API Spotify",
-      "Recherche avancée et recommandations",
-      "Interface fluide et responsive"
+      "Recherche dynamique de morceaux via l'API Spotify",
+      "Authentification sécurisée (OAuth + Client Credentials)",
+      "Renouvellement automatique des tokens avec stockage local",
+      "Fonctions serverless pour sécuriser les clés API",
+      "Interface responsive avec animations fluides"
     ],
     href: "https://jammmingomusic.netlify.app/",
   }

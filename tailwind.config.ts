@@ -58,6 +58,7 @@ const config = {
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
         display: ['"DM Serif Display"', 'serif'],
+        roboto: ['Roboto', 'serif'],
       },
       keyframes: {
         'accordion-down': {

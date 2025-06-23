@@ -1,9 +1,7 @@
 ---
 import Card from '../Card.astro'
-import { Button } from '../ui/button'
-import { LINKS } from '../../lib/constants'
-import { Linkedin, Github, Mail, Smile } from 'lucide-react'
-import Tooltip from '../Tooltip.jsx'
+const title = "Sarah Tabet";
+const job = "Développeuse Front-End";
 ---
 
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-4" padBottom={false}>
@@ -11,10 +9,10 @@ import Tooltip from '../Tooltip.jsx'
     <div class="flex flex-col gap-4 md:max-h-[300px]">
       <div class="flex h-full flex-col flex-1 mt-4">
         <div class="border-b pb-2 border-gray-500">
-          <h2 class="mb-2 sm:mb-4 text-4xl sm:text-6xl">Sarah Tabet</h2>
-          <p class="mb-4 text-2xl sm:text-4xl font-display tracking-wide">
-            Développeuse <span class="text-[#FF8A60]">Front-End</span>
-          </p>
+          <h2 class="gradient-text mb-2 sm:mb-4 text-4xl sm:text-6xl font-bold font-roboto outline-text">
+            {title}
+          </h2>
+          <p class="mb-4 text-2xl sm:text-4xl font-display tracking-wide">{job}</p>
         </div>
         <div class="my-8 text-xl">
           <p>Créativité | Qualité | Précision</p>

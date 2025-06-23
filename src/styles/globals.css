@@ -58,3 +58,10 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .outline-text {
+    color: #F6F0EA;
+    -webkit-text-stroke: 1px #191a18;
+  }
+}

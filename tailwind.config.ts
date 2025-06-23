@@ -57,6 +57,7 @@ const config = {
       },
       fontFamily: {
         sans: ['Inter', ...fontFamily.sans],
+        display: ['"DM Serif Display"', 'serif'],
       },
       keyframes: {
         'accordion-down': {

@@ -11,45 +11,21 @@ import Tooltip from '../Tooltip.jsx'
     <div class="flex flex-col gap-4 md:max-h-[300px]">
       <div class="flex h-full flex-col flex-1 mt-4">
         <div class="border-b pb-2 border-gray-500">
-          <h2 class="mb-4 text-6xl">Sarah Tabet</h2>
-          <p class="mb-4 text-4xl">Développeuse Front-End</p>
+          <h2 class="mb-2 sm:mb-4 text-4xl sm:text-6xl">Sarah Tabet</h2>
+          <p class="mb-4 text-2xl sm:text-4xl font-display tracking-wide">
+            Développeuse <span class="text-[#FF8A60]">Front-End</span>
+          </p>
         </div>
-        <div class="my-8 text-lg">
+        <div class="my-8 text-xl">
           <p>Créativité | Qualité | Précision</p>
         </div>
       </div>
-      <!-- <div class="flex gap-4">
-        <a href={LINKS.linkedin} aria-label="linkeding profile" target="_blank">
-          <Button aria-label="linkedin profile">
-            <Linkedin />
-            <span class="sr-only">Profil Linkedin</span>
-          </Button>
-        </a>
-        <a href={LINKS.github} aria-label="github profile" target="_blank">
-          <Button aria-label="github profile">
-            <Github />
-            <span class="sr-only">Profil GitHub</span>
-          </Button>
-        </a>
-        <a href={LINKS.mail} aria-label="mail profile" target="_blank">
-          <Button>
-            <Mail />
-            <span class="sr-only">Contact email</span>
-          </Button>
-        </a>
-        <Tooltip client:load>
-          <Button>
-            <Smile />
-            <span class="sr-only">Easter Egg</span>
-          </Button>
-        </Tooltip>
-      </div> -->
     </div>
     <img
       width="300"
       height="300"
       src="/me.png"
-      class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:bottom-auto md:right-auto md:z-auto md:opacity-100"
+      class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:right-auto md:z-auto md:opacity-100"
       alt="photo de sarah tabet"
     />
   </div>

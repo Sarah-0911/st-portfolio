@@ -9,7 +9,7 @@ const { title, body, titleClass } = Astro.props
 ---
 
 <>
-  {title && <h2 class={`z-20 m-0 text-xl font-bold ${titleClass || ''}`}>{title}</h2>}
+  {title && <h2 class={`z-20 m-0 text-xl font-bold font-display ${titleClass || ''}`}>{title}</h2>}
   {body && <p class="m-0 text-base font-light">{body}</p>}
   <slot />
 </>

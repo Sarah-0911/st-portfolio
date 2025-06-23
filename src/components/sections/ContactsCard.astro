@@ -1,29 +1,56 @@
 ---
 import Card from '../Card.astro'
 import { LINKS } from '../../lib/constants'
+import { Button } from '../ui/button'
+import Tooltip from '../Tooltip.jsx'
+import { Linkedin, Github, Mail, Smile } from 'lucide-react'
 
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-4" title="Travaillons ensemble!">
-<div class="h-full">
-    <address class="mt-4 flex flex-col">
-      <h2 class="text-gray-500">Me contacter</h2>
-      <p>sarah.tabet69@gmail.com</p>
-      <p>Lyon, France</p>
-    </address>
-    <div class="mt-4 flex w-fit flex-col">
-      <h2 class="text-gray-500">Réseaux</h2>
-      <ul>
-        <li>
-          <a href={LINKS.linkedin} target="_blank">Linkedin</a>
-        </li>
-        <li>
-          <a href={LINKS.github} target="_blank">Github</a>
-        </li>
-        <li>
-          <!-- <a href={LINKS.discord} target="_blank">Discord</a> -->
-        </li>
-      </ul>
+<Card
+  colSpan="md:col-span-1"
+  rowSpan="md:row-span-4"
+  title="Travaillons ensemble!"
+  titleClass="text-center"
+  padBottom={false}
+  >
+  <div class="relative w-full h-[200px] md:h-full overflow-hidden mt-12">
+    <div
+    class="absolute inset-0 h-[300px] bg-no-repeat bg-top bg-contain pointer-events-none"
+    style="background-image: url('/images/bg-android.png');"
+    aria-hidden="true"
+    >
+  </div>
+  <div class="relative z-10 flex flex-col items-center pt-12 sm:pt-16 gap-4">
+      <h2 class="text-gray-500 italic">Me contacter</h2>
+      <div class="flex gap-4">
+        <a href={LINKS.mail} aria-label="mail profile" target="_blank">
+          <Button>
+            <Mail />
+            <span class="sr-only">Contact email</span>
+          </Button>
+        </a>
+        <a href={LINKS.linkedin} aria-label="linkedin profile" target="_blank">
+          <Button>
+            <Linkedin />
+            <span class="sr-only">Profil Linkedin</span>
+          </Button>
+        </a>
+      </div>
+      <div class="flex gap-4">
+        <a href={LINKS.github} aria-label="github profile" target="_blank">
+          <Button>
+            <Github />
+            <span class="sr-only">Profil GitHub</span>
+          </Button>
+        </a>
+        <Tooltip client:load>
+          <Button>
+            <Smile />
+            <span class="sr-only">Easter Egg</span>
+          </Button>
+        </Tooltip>
+      </div>
     </div>
   </div>
 </Card>

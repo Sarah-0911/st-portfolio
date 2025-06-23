@@ -6,7 +6,7 @@ import { Linkedin, Github, Mail, Smile } from 'lucide-react'
 import Tooltip from '../Tooltip.jsx'
 ---
 
-<Card colSpan="md:col-span-3" rowSpan="md:row-span-4">
+<Card colSpan="md:col-span-3" rowSpan="md:row-span-4" padBottom={false}>
   <div class="flex h-full w-full justify-between">
     <div class="flex flex-col gap-4 md:max-h-[300px]">
       <div class="flex h-full flex-col flex-1 mt-4">
@@ -14,11 +14,11 @@ import Tooltip from '../Tooltip.jsx'
           <h2 class="mb-4 text-6xl">Sarah Tabet</h2>
           <p class="mb-4 text-4xl">Développeuse Front-End</p>
         </div>
-        <div class="mt-8 text-lg">
+        <div class="my-8 text-lg">
           <p>Créativité | Qualité | Précision</p>
         </div>
       </div>
-      <div class="flex gap-4">
+      <!-- <div class="flex gap-4">
         <a href={LINKS.linkedin} aria-label="linkeding profile" target="_blank">
           <Button aria-label="linkedin profile">
             <Linkedin />
@@ -43,7 +43,7 @@ import Tooltip from '../Tooltip.jsx'
             <span class="sr-only">Easter Egg</span>
           </Button>
         </Tooltip>
-      </div>
+      </div> -->
     </div>
     <img
       width="300"

@@ -5,16 +5,16 @@ const job = "Développeuse Front-End";
 ---
 
 <Card colSpan="md:col-span-3" rowSpan="md:row-span-4" padBottom={false}>
-  <div class="flex h-full w-full justify-between">
+  <div class="flex h-full w-full justify-between items-center">
     <div class="flex flex-col gap-4 md:max-h-[300px]">
       <div class="flex h-full flex-col flex-1 mt-4">
-        <div class="border-b pb-2 border-gray-500">
-          <h2 class="gradient-text mb-2 sm:mb-4 text-4xl sm:text-6xl font-bold font-roboto outline-text text-primary">
+        <div class="border-b pb-2 border-second-gray">
+          <h2 class="gradient-text mb-2 sm:mb-4 text-4xl sm:text-6xl font-bold font-roboto outline-text text-second-gray">
             {title}
           </h2>
           <p class="mb-4 text-2xl sm:text-4xl font-display tracking-wide">{job}</p>
         </div>
-        <div class="my-8 text-xl">
+        <div class="my-8 text-xl text-primary">
           <p>Créativité | Qualité | Précision</p>
         </div>
       </div>
@@ -23,7 +23,7 @@ const job = "Développeuse Front-End";
       width="300"
       height="300"
       src="/me.png"
-      class="pointer-events-none absolute bottom-[-20px] right-[-110px] z-[-1] max-h-[300px] w-auto select-none opacity-50 md:relative md:right-auto md:z-auto md:opacity-100"
+      class="pointer-events-none absolute bottom-[-20px] right-[-80px] z-[-1] max-h-[300px] sm:max-h-[340px] w-auto select-none opacity-50 md:relative md:right-auto md:z-auto md:opacity-100"
       alt="photo de sarah tabet"
     />
   </div>

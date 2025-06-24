@@ -48,7 +48,7 @@ const handleClick = (e: React.MouseEvent) => {
     <>
       <div className="group hover:border-primary rounded-lg px-4 py-6">
         <ShadcnCard
-          className="transform-y-[-40%] align-start perspective-1200 group relative flex-none transform justify-start shadow-lg transition duration-300 ease-in-out"
+          className="transform-y-[-40%] align-start perspective-1200 group relative flex-none transform justify-start shadow-lg transition duration-300 ease-in-out overflow-hidden"
         >
         <div onClick={handleClick} className="h-56 w-full transition-transform duration-700 ease-out group-hover:scale-105 cursor-pointer rounded-md">
           <img

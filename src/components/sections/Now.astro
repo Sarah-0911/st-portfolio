@@ -3,10 +3,9 @@ import Card from '../Card.astro'
 import Pulse from '../Pulse.astro'
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-2" bgColor='bg-card-foreground' textColor='text-card'>
-  <div class="flex w-full items-center gap-3 mb-4">
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-1" bgColor='bg-card-foreground' textColor='text-card'>
+    <div class="flex w-full items-center gap-3">
     <h2>Actuellement</h2>
     <Pulse />
   </div>
-  <p class="font-semibold mb-4 italic text-primary">À l'écoute pour collaborer sur vos projets.</p>
 </Card>

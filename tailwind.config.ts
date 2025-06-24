@@ -51,6 +51,9 @@ const config = {
           yellow: 'hsl(var(--yellow))',
         },
       },
+      boxShadow: {
+        'avatar-bubble': '10px 10px 0px 0px #181a17',
+      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',

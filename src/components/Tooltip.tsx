@@ -7,7 +7,6 @@ const messages = [
   "Vous êtes persistant!",
   "Encore? Vraiment?",
   "Quelle curiosité!",
-  "Pourquoi donc?",
   "C'est agaçant!",
   "Une petite pause?",
   "Pas très sympa!",
@@ -52,7 +51,7 @@ export default function Tooltip({ children } : { children: React.ReactNode }) {
       {children}
       {visible && (
         <div
-        className="inline-block text-center absolute left-1/2 -translate-x-1/2 -translate-y-[52px] mt-1 p-2 bg-black whitespace-nowrap text-white rounded-sm z-10 shadow-lg text-sm after:content-[''] after:block after:rotate-45 after:w-4 after:h-4 after:shadow-custom after:shadow-primary-500 after:absolute after:-bottom-2 after:-translate-x-1/2 after:left-1/2 after:bg-black after:z-20"
+        className="inline-block text-center absolute left-1/2 -translate-x-1/2 -translate-y-[52px] mt-1 p-2 bg-card-foreground whitespace-nowrap text-card rounded-sm z-10 shadow-lg text-xs after:content-[''] after:block after:rotate-45 after:w-4 after:h-4 after:shadow-custom after:shadow-primary-500 after:absolute after:-bottom-2 after:-translate-x-1/2 after:left-1/2 after:bg-card-foreground after:z-20"
         role='tooltip'
         aria-hidden={!visible}>
           {message}

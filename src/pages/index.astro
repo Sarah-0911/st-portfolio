@@ -4,8 +4,8 @@ import IntroCard from '../components/sections/IntroCard.astro'
 import Stacks from '../components/sections/Stacks.astro'
 import Card from '../components/Card.astro'
 import GoalCard from '../components/sections/GoalCard.astro'
-import RandomCard from '../components/sections/RandomCard.astro'
 import Now from '../components/sections/Now.astro'
+import Comic from '../components/sections/Comic.astro'
 import ContactCard from '../components/sections/ContactCard.astro'
 //
 // import { motion, AnimatePresence } from 'framer-motion'
@@ -50,14 +50,15 @@ import ContactCard from '../components/sections/ContactCard.astro'
     <Stacks />
     <ContactCard />
     <GoalCard />
+    <Comic />
     <Now />
-    <RandomCard />
     <Card
       colSpan="md:col-span-1"
       rowSpan="md:row-span-2"
       href="/portfolio"
+      bgColor="bg-card-yellow"
       >
-      <p class="pt-8 italic font-semibold">Découvrez mes projets en développement web et mobile.</p>
+      <p class="pt-8 italic">Découvrez mes projets en développement web et mobile.</p>
     </Card>
     <Card
       colSpan="md:col-span-1"

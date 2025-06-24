@@ -1,13 +1,12 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
 import IntroCard from '../components/sections/IntroCard.astro'
-import Stacks from '../components/sections/Stacks.astro'
-import Card from '../components/Card.astro'
+import StacksCard from '../components/sections/StacksCard.astro'
 import GoalCard from '../components/sections/GoalCard.astro'
-import Now from '../components/sections/Now.astro'
-import Comic from '../components/sections/Comic.astro'
+import ComicCard from '../components/sections/ComicCard.astro'
 import ContactCard from '../components/sections/ContactCard.astro'
-//
+import ToProjectsCard from '../components/sections/ToProjectsCard.astro'
+
 // import { motion, AnimatePresence } from 'framer-motion'
 ---
 
@@ -17,21 +16,21 @@ import ContactCard from '../components/sections/ContactCard.astro'
 
   const cards = document.querySelectorAll('.card-animate')
 
-  // const sequence = [
-  //   loaderAnimation,
-  //   [
-  //     cards,
-  //     { y: ['40%', '0%'], opacity: [0, 1] },
-  //     {
-  //       at: '-0.1',
-  //       duration: 0.4,
-  //       delay: stagger(0.3),
-  //       easing: spring({ velocity: 100, stiffness: 50, damping: 10 }),
-  //     },
-  //   ],
-  // ]
+// const sequence = [
+//   loaderAnimation,
+//   [
+//     cards,
+//     { y: ['40%', '0%'], opacity: [0, 1] },
+//     {
+//       at: '-0.1',
+//       duration: 0.4,
+//       delay: stagger(0.3),
+//       easing: spring({ velocity: 100, stiffness: 50, damping: 10 }),
+//     },
+//   ],
+// ]
 
-  // timeline(sequence as TimelineDefinition)
+// timeline(sequence as TimelineDefinition)
 </script>
 
 <BaseLayout
@@ -47,25 +46,10 @@ import ContactCard from '../components/sections/ContactCard.astro'
     class="relative m-auto grid w-full max-w-6xl gap-2 overflow-hidden p-2 sm:gap-2 sm:p-4 md:grid-cols-3 md:gap-3 md:p-6 lg:grid-cols-4 lg:grid-rows-6 lg:gap-4"
   >
     <IntroCard />
-    <Stacks />
+    <StacksCard />
     <ContactCard />
     <GoalCard />
-    <Comic />
-    <Now />
-    <Card
-      colSpan="md:col-span-1"
-      rowSpan="md:row-span-2"
-      href="/portfolio"
-      bgColor="bg-card-yellow"
-      >
-      <p class="pt-8 italic">Découvrez mes projets en développement web et mobile.</p>
-    </Card>
-    <Card
-      colSpan="md:col-span-1"
-      rowSpan="md:row-span-1"
-      title="Random"
-      body="On verra"
-      bgColor="bg-background"
-      />
+    <ComicCard />
+    <ToProjectsCard />
   </main>
 </BaseLayout>

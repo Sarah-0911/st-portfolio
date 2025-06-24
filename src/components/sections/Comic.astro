@@ -3,10 +3,18 @@ import Card from '../Card.astro'
 ---
 
 <Card colSpan="md:col-span-1" rowSpan="md:row-span-2" textColor='text-card'>
-  <div class="h-full flex items-center justify-center pb-4 gap-4">
+  <div class="h-full flex items-start justify-center pb-4 gap-4">
     <div class="flex bg-card text-card-foreground border-2 border-card-foreground p-4 rounded-lg rounded-br-none shadow-avatar-bubble">
       <p class="text-sm font-semibold">À l'écoute pour collaborer sur vos projets !</p>
     </div>
-    <img class="w-12 h-12 self-end" src="/images/me-avatar.png" alt="mon avatar">
+      <div class="relative w-12 h-12 shrink-0 self-end">
+        <img class="w-12 h-12" src="/images/me-avatar.png" alt="mon avatar" />
+        <span class="absolute bottom-0 right-1">
+          <span class="relative flex h-3 w-3">
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-400 opacity-75"></span>
+            <span class="relative inline-flex h-3 w-3 rounded-full bg-green-500"></span>
+          </span>
+        </span>
+      </div>
   </div>
 </Card>

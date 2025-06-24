@@ -12,7 +12,7 @@ import { PROJECTS, PERSONAL_PROJECTS } from '../lib/constants'
 >
   <main class="flex min-h-[80vh] flex-auto flex-col" transition:animate="slide">
     <TopLayout>
-      <h2 class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-center">
+      <h2 class="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 text-center font-display">
         Projets web & mobile
       </h2>
     </TopLayout>
@@ -26,11 +26,11 @@ import { PROJECTS, PERSONAL_PROJECTS } from '../lib/constants'
 
         {/* Section Projets personnels */}
     <TopLayout>
-      <h2 class="scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight mt-12 text-center">
+      <h2 class="scroll-m-20 border-b pb-2 text-2xl font-semibold tracking-tight mt-8 text-center font-display">
         Projets personnels
       </h2>
     </TopLayout>
-    <BottomLayout size="lg">
+    <BottomLayout size="xl">
       <div class="grid md:grid-cols-2 lg:grid-cols-3 w-full justify-center">
         {PERSONAL_PROJECTS.map((project) => (
           <ProjectCard client:visible project={project} className="w-80" />

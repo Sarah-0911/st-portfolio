@@ -3,9 +3,9 @@ import Card from '../Card.astro'
 import Pulse from '../Pulse.astro'
 ---
 
-<Card colSpan="md:col-span-1" rowSpan="md:row-span-1" bgColor='bg-card-foreground' textColor='text-card'>
-    <div class="flex w-full items-center gap-3">
-    <h2>Actuellement</h2>
+<Card colSpan="md:col-span-1" rowSpan="md:row-span-1" bgColor='bg-card' textColor='text-card'>
+    <div class="flex w-full items-center justify-center gap-3">
     <Pulse />
+    <h2 class="text-card-foreground">Actuellement disponible</h2>
   </div>
 </Card>

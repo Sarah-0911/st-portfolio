@@ -90,6 +90,12 @@ const config = {
           '0%': { transform: 'scale(1)', opacity: '1' },
           '100%': { transform: 'scale(0.95)', opacity: '0' },
         },
+        wiggleX: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '25%': { transform: 'translateX(-2px)' },
+          '50%': { transform: 'translateX(2px)' },
+          '75%': { transform: 'translateX(-2px)' },
+        },
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
@@ -98,6 +104,7 @@ const config = {
         'fadeOut': 'fadeOut 0.25s ease-out forwards',
         'zoomIn': 'zoomIn 0.3s ease-out forwards',
         'zoomOut': 'zoomOut 0.3s ease-out forwards',
+        'wiggle-x': 'wiggleX 0.3s ease-in-out',
       },
     },
   },

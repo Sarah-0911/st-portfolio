@@ -42,7 +42,7 @@ export default function Tooltip({ children } : { children: React.ReactNode }) {
 
   return (
     <div
-      className="relative inline-block"
+      className="relative inline-block hover:animate-wiggle-x"
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
       onTouchStart={handleMouseDown}

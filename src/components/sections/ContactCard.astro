@@ -25,13 +25,13 @@ import { Linkedin, Github, Mail, Smile } from 'lucide-react'
   <div class="relative z-10 flex flex-col items-center pt-12 sm:pt-16 gap-4">
       <h2 class="text-second-gray italic sm:pb-6">Me contacter</h2>
       <div class="flex gap-4">
-        <a href={LINKS.mail} aria-label="mail profile" target="_blank">
+        <a class="hover:animate-wiggle-x" href={LINKS.mail} aria-label="mail profile" target="_blank">
           <Button>
             <Mail />
             <span class="sr-only">Contact email</span>
           </Button>
         </a>
-        <a href={LINKS.linkedin} aria-label="linkedin profile" target="_blank">
+        <a class="hover:animate-wiggle-x" href={LINKS.linkedin} aria-label="linkedin profile" target="_blank">
           <Button>
             <Linkedin />
             <span class="sr-only">Profil Linkedin</span>
@@ -39,7 +39,7 @@ import { Linkedin, Github, Mail, Smile } from 'lucide-react'
         </a>
       </div>
       <div class="flex gap-4">
-        <a href={LINKS.github} aria-label="github profile" target="_blank">
+        <a class="hover:animate-wiggle-x" href={LINKS.github} aria-label="github profile" target="_blank">
           <Button>
             <Github />
             <span class="sr-only">Profil GitHub</span>

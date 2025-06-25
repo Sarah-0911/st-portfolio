@@ -46,29 +46,26 @@ const handleClick = (e: React.MouseEvent) => {
 
   return (
     <>
-      <div className="group hover:border-primary rounded-lg px-4 py-6">
-        <ShadcnCard
-          className="transform-y-[-40%] align-start perspective-1200 group relative flex-none transform justify-start shadow-lg transition duration-300 ease-in-out overflow-hidden"
-        >
-        <div onClick={handleClick} className="h-56 w-full transition-transform duration-700 ease-out group-hover:scale-105 cursor-pointer rounded-md">
+      <ShadcnCard className="relative w-80 group overflow-hidden transition duration-300 ease-in-out bg-pale-orange">
+        <div
+          onClick={handleClick}
+          className="h-56 w-full transition-transform duration-700 ease-out group-hover:scale-x-105 cursor-pointer">
           <img
             src={images[0]}
             alt={altText}
-            className="h-full w-full object-cover rounded-md transition-all duration-300 group-hover:shadow-2xl group-hover:shadow-card-foreground"
+            className="h-full w-full object-cover transition-shadow duration-300 group-hover:shadow-2xl group-hover:shadow-card-foreground"
             loading="eager"
           />
           {/* Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center bg-card-foreground/30 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100 rounded-md">
+          <div className="absolute inset-0 flex items-center justify-center bg-card-foreground/40 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
             <span className="text-2xl text-card font-bold transition-opacity duration-1000 ease-out delay-200">+</span>
           </div>
         </div>
-          <slot />
-        </ShadcnCard>
-        <div className="flex flex-col gap-y-0.5 px-10 py-4 text-center">
-          <h1 className="text-2xl font-semibold mt-4 mb-2 font-display">{heading}</h1>
-          <h2 className="text-muted-foreground">{subheading}</h2>
+        <div className="flex flex-col gap-4 w-full h- px-10 pt-8 pb-10 text-center">
+          <h2 className="text-2xl font-semibold font-display">{heading}</h2>
+          <p className="text-muted-foreground">{subheading}</p>
         </div>
-      </div>
+      </ShadcnCard>
 
       {modalOpen && createPortal(<ProjectModal
         onClose={closeModal}

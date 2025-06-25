@@ -16,21 +16,21 @@ import ToProjectsCard from '../components/sections/ToProjectsCard.astro'
 
   const cards = document.querySelectorAll('.card-animate')
 
-// const sequence = [
-//   loaderAnimation,
-//   [
-//     cards,
-//     { y: ['40%', '0%'], opacity: [0, 1] },
-//     {
-//       at: '-0.1',
-//       duration: 0.4,
-//       delay: stagger(0.3),
-//       easing: spring({ velocity: 100, stiffness: 50, damping: 10 }),
-//     },
-//   ],
-// ]
+const sequence = [
+  loaderAnimation,
+  [
+    cards,
+    { y: ['40%', '0%'], opacity: [0, 1] },
+    {
+      at: '-0.1',
+      duration: 0.4,
+      delay: stagger(0.3),
+      easing: spring({ velocity: 100, stiffness: 50, damping: 10 }),
+    },
+  ],
+]
 
-// timeline(sequence as TimelineDefinition)
+timeline(sequence as TimelineDefinition)
 </script>
 
 <BaseLayout
@@ -45,11 +45,11 @@ import ToProjectsCard from '../components/sections/ToProjectsCard.astro'
   <main
     class="relative m-auto grid w-full max-w-6xl gap-2 overflow-hidden p-2 sm:gap-2 sm:p-4 md:grid-cols-3 md:gap-3 md:p-6 lg:grid-cols-4 lg:grid-rows-6 lg:gap-4"
   >
-    <IntroCard />
-    <StacksCard />
-    <ContactCard />
-    <GoalCard />
-    <ComicCard />
-    <ToProjectsCard />
+    <IntroCard class="order-1 md:order-none" />
+    <StacksCard class="order-2 md:order-none" />
+    <ContactCard class="order-4 md:order-none" />
+    <GoalCard class="order-3 md:order-none" />
+    <ComicCard class="order-last md:order-none" />
+    <ToProjectsCard class="order-5 md:order-none" />
   </main>
 </BaseLayout>

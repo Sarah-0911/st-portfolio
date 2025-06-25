@@ -5,16 +5,20 @@
   class="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60"
 >
   <div
-    class="container flex h-18 items-center space-x-4 sm:justify-between sm:space-x-0"
+    class="container flex h-20 items-center space-x-4 sm:justify-between sm:space-x-0"
   >
-    <div class="flex gap-6 md:gap-10 w-12 h-12 p-4 md:w-20 md:h-20 items-center justify-center">
+    <div class="flex gap-6 md:gap-10 p-5 md:w-20 md:h-20 items-center justify-center">
       <a href="/" class="flex items-center space-x-2">
         <img src="/images/robot-logo.png" alt="Logo">
       </a>
     </div>
     <div class="flex flex-1 items-center justify-end space-x-4">
       <nav class="flex items-center space-x-1 gap-8">
-        <a href="/portfolio"><span>Mes Projets</span></a>
+        <a class="group relative focus:text-primary" href="/portfolio">
+          <span>Mes Projets</span>
+            <span class="absolute left-0 -bottom-1 h-[2px] w-0 bg-primary transition-all duration-300 group-hover:w-full">
+            </span>
+        </a>
       </nav>
     </div>
   </div>

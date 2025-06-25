@@ -27,13 +27,13 @@ const { title, body, colSpan, rowSpan, href, textColor, bgColor, titleClass, pad
   ${textColor}
   ${colSpan || 'md:col-span-2'}
   ${rowSpan || ''}
-  ${href ? 'cursor-pointer hover:outline hover:outline-2 hover:outline-primary' : ''}`}
+  ${href ? 'cursor-pointer hover:outline hover:outline-2 hover:outline-primary duration-200' : ''}`}
 >
   {
     href ? (
       <a href={href} class={`block h-full w-full ${textColor || ' '}`}>
         <SquareArrowOutUpRight
-          className="group-hover:text-primary position absolute right-6"
+          className="group-hover:text-primary position absolute right-6 duration-200"
           size={20}
         />
         <ContentCard title={title} body={body} titleClass={titleClass}>

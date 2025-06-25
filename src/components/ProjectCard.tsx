@@ -9,13 +9,13 @@ type ProjectCardProps = {
   className?: string;
 };
 
-const ProjectCard = ({ project, className}: ProjectCardProps) => {
+const ProjectCard = ({ project }: ProjectCardProps) => {
 
 const [modalOpen, setModalOpen] = useState(false);
 const [isPreloading, setIsPreloading] = useState(true);
 const [isClosing, setIsClosing] = useState(false);
 
-const { heading, subheading, images, altText } = project;
+const { heading, subheading, images, altText, category } = project;
 
 const handleClick = (e: React.MouseEvent) => {
   setIsPreloading(true);
@@ -46,7 +46,13 @@ const handleClick = (e: React.MouseEvent) => {
 
   return (
     <>
-      <ShadcnCard className="relative w-80 group overflow-hidden transition duration-300 ease-in-out bg-pale-orange">
+      <ShadcnCard className="relative mx-4 md:mx-2 group overflow-hidden transition duration-300 ease-in-out bg-pale-orange">
+
+        {category === "perso" &&
+          <div className='absolute right-2 top-2 z-10 rounded-full bg-muted px-3 py-1 text-xs font-semibold text-muted-foreground shadow-md'>
+            <p>Projet perso</p>
+          </div>}
+
         <div
           onClick={handleClick}
           className="h-56 w-full transition-transform duration-700 ease-out group-hover:scale-x-105 cursor-pointer">

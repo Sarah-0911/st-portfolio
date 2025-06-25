@@ -28,4 +28,5 @@ export type Project = {
   technologies: string[]
   features: string[]
   href?: string
+  category?: string
 }

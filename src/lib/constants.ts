@@ -114,9 +114,6 @@ export const PROJECTS = [
     ],
     href: 'https://hyteka.com/',
   },
-];
-
-export const PERSONAL_PROJECTS = [
   {
     heading: "Boxy Generator",
     subheading: "Générateur d'ombres CSS personnalisées avec React et Redux.",
@@ -133,6 +130,7 @@ export const PERSONAL_PROJECTS = [
       "Export rapide du code CSS généré"
     ],
     href: "https://boxy-generator-sigma.vercel.app/",
+    category: "perso",
   },
   {
     heading: "Ravenous",
@@ -150,6 +148,7 @@ export const PERSONAL_PROJECTS = [
       "Interface utilisateur réactive avec React"
     ],
     href: "https://react-ravenous-17c8d9ae06c1.herokuapp.com/",
+    category: "perso",
   },
   {
     heading: "Jammming",
@@ -168,5 +167,6 @@ export const PERSONAL_PROJECTS = [
       "Interface responsive avec animations fluides"
     ],
     href: "https://jammmingomusic.netlify.app/",
+    category: "perso",
   }
 ];

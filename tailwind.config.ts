@@ -15,7 +15,9 @@ const config = {
     },
     extend: {
       colors: {
-        'second-gray': '#1f2937', // équivalent de bg-gray-800
+        'second-gray': '#1F1F1F',
+        'pale-orange': '#f9d49d',
+        'dark-green': '#142E25',
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
         ring: 'hsl(var(--ring))',

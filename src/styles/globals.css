@@ -6,11 +6,12 @@
   :root {
     --background: 0 0% 100%;
     --foreground: 90 4% 9.8%;      /* #181a17 gris foncé */
-    --card: 32 39% 94%;      /* #FAF2E9 beige clair */
+    --card: 32 39% 96%;     /* #F8F5F2 beige clair */
     --card-foreground: 90 4% 9.8%;   /* #181a17 gris foncé */
     --popover: 0 0% 100%;
     --popover-foreground: 90 4% 9.8%;
-    --primary: 15 100% 70%;      /* #ff8a60 orange */
+    /* --primary: 15 100% 70%;      #ff8a60 orange */
+     --primary: 20 75% 57%;     /* #E3723C orange2 */
     --primary-foreground: 60 9.1% 97.8%;
     --secondary: 60 4.8% 95.9%;
     --secondary-foreground: 24 9.8% 10%;

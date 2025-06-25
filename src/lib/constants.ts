@@ -10,15 +10,13 @@ export const LINKS = {
   github: 'https://github.com/Sarah-0911',
   linkedin: 'https://www.linkedin.com/in/sarah-tabet-',
   mail: 'mailto:sarah.tabet69@gmail.com',
-  // discord: 'https://discordapp.com/users/163300027618295808',
 }
 
 // Global
 export const SITE: Site = {
-  TITLE: 'Astro Sphere',
-  DESCRIPTION:
-    'Welcome to Astro Sphere, a portfolio and blog for designers and developers.',
-  AUTHOR: 'Mark Horn',
+  TITLE: 'Sarah Tabet - Portfolio',
+  DESCRIPTION: 'Portfolio de Sarah Tabet, développeuse front-end créative et passionnée.',
+  AUTHOR: 'Sarah Tabet'
 }
 
 // Projects

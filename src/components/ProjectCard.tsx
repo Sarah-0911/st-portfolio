@@ -3,6 +3,7 @@ import { ProjectModal } from './ProjectModal';
 import { Card as ShadcnCard } from './ui/card';
 import { createPortal } from 'react-dom';
 import type { Project } from '../lib/types';
+import { Eye } from 'lucide-react';
 
 type ProjectCardProps = {
   project: Project;
@@ -49,7 +50,7 @@ const handleClick = (e: React.MouseEvent) => {
       <ShadcnCard className="relative m-4 md:m-2 w-80 group overflow-hidden transition duration-300 ease-in-out bg-card rounded-sm">
 
         {category === "perso" &&
-        <div className='absolute right-2 top-2 z-10 rounded-full bg-muted px-3 py-1 text-xs font-semibold text-muted-foreground shadow-md'>
+        <div className='absolute left-3 bottom-3 z-10 rounded-full bg-muted px-3 py-1 text-xs font-semibold text-muted-foreground shadow-md'>
           <p>Projet perso</p>
         </div>}
 
@@ -64,7 +65,9 @@ const handleClick = (e: React.MouseEvent) => {
           />
           {/* Overlay */}
           <div className="absolute inset-0 flex items-center justify-center bg-card-foreground/40 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-            <span className="text-2xl text-card font-bold transition-opacity duration-1000 ease-out delay-200">+</span>
+            <span className="text-2xl text-card font-bold transition-opacity duration-1000 ease-out delay-200">
+              <Eye />
+            </span>
           </div>
         </div>
         <div className="flex flex-col gap-4 w-full px-8 md:px-16 pt-8 pb-10 text-center">

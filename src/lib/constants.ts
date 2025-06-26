@@ -51,8 +51,8 @@ export const PROJECTS = [
     description: 'Site e-commerce permettant de commander des emballages alimentaires personnalisés. L\'interface a été repensée pour une navigation plus moderne et intuitive.',
     images: [
       "/images/projects/otour2-1.png",
-      "/images/sad_cat.jpg",
-      "/images/sad_cat.jpg",
+      "/images/projects/otour2-2.png",
+      "/images/projects/otour2-3.png",
     ],
     altText: 'Aperçu du site Otour2',
     technologies: [
@@ -97,8 +97,8 @@ export const PROJECTS = [
     description: 'Création de l\'identité visuelle d\'une boutique en ligne, assurant une expérience utilisateur cohérente et attractive.',
     images: [
       "/images/projects/htk-1.png",
-      "/images/sad_cat.jpg",
-      "/images/sad_cat.jpg",
+      "/images/projects/htk-2.png",
+      "/images/projects/htk-3.png",
     ],
     altText: 'Aperçu du site Hyteka',
     technologies: [

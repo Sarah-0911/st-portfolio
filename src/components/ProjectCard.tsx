@@ -46,7 +46,7 @@ const handleClick = (e: React.MouseEvent) => {
 
   return (
     <>
-      <ShadcnCard className="relative m-4 md:m-2 group overflow-hidden transition duration-300 ease-in-out bg-card rounded-sm">
+      <ShadcnCard className="relative m-4 md:m-2 w-80 group overflow-hidden transition duration-300 ease-in-out bg-card rounded-sm">
 
         {category === "perso" &&
         <div className='absolute right-2 top-2 z-10 rounded-full bg-muted px-3 py-1 text-xs font-semibold text-muted-foreground shadow-md'>

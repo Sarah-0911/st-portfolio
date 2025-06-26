@@ -10,14 +10,14 @@ import { PROJECTS } from '../lib/constants'
   title="Portfolio"
   description="Quelques projets que j'ai réalisés."
 >
-  <main class="flex min-h-[80vh] flex-auto flex-col" transition:animate="slide">
+  <main class="flex min-h-[80vh] flex-auto flex-col justify-center" transition:animate="slide">
     <TopLayout>
       <h2 class="scroll-m-20 border-b pb-2 text-3xl font-semibold first:mt-0 text-center font-display">
         Portfolio
       </h2>
     </TopLayout>
     <BottomLayout size="xl">
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 w-full gap-2">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 w-full md:gap-6">
         {PROJECTS.map((project) => (
           <ProjectCard client:visible project={project} />
         ))}

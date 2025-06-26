@@ -67,8 +67,8 @@ const handleClick = (e: React.MouseEvent) => {
             <span className="text-2xl text-card font-bold transition-opacity duration-1000 ease-out delay-200">+</span>
           </div>
         </div>
-        <div className="flex flex-col gap-4 w-full px-16 pt-8 pb-10 text-center">
-          <h2 className="text-2xl font-semibold font-display">{heading}</h2>
+        <div className="flex flex-col gap-4 w-full px-8 md:px-16 pt-8 pb-10 text-center">
+          <h2 className="text-xl md:text-2xl font-semibold font-display">{heading}</h2>
           <p className="text-muted-foreground">{subheading}</p>
         </div>
       </ShadcnCard>

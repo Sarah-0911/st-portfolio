@@ -46,20 +46,20 @@ const handleClick = (e: React.MouseEvent) => {
 
   return (
     <>
-      <ShadcnCard className="relative mx-4 md:mx-2 group overflow-hidden transition duration-300 ease-in-out bg-pale-orange">
+      <ShadcnCard className="relative m-4 md:m-2 group overflow-hidden transition duration-300 ease-in-out bg-card rounded-sm">
 
         {category === "perso" &&
-          <div className='absolute right-2 top-2 z-10 rounded-full bg-muted px-3 py-1 text-xs font-semibold text-muted-foreground shadow-md'>
-            <p>Projet perso</p>
-          </div>}
+        <div className='absolute right-2 top-2 z-10 rounded-full bg-muted px-3 py-1 text-xs font-semibold text-muted-foreground shadow-md'>
+          <p>Projet perso</p>
+        </div>}
 
         <div
           onClick={handleClick}
-          className="h-56 w-full transition-transform duration-700 ease-out group-hover:scale-x-105 cursor-pointer">
+          className="h-56 w-full transition-transform duration-700 ease-out group-hover:scale-x-100 cursor-pointer">
           <img
             src={images[0]}
             alt={altText}
-            className="h-full w-full object-cover transition-shadow duration-300 group-hover:shadow-2xl group-hover:shadow-card-foreground"
+            className="h-full w-full object-cover"
             loading="eager"
           />
           {/* Overlay */}
@@ -67,7 +67,7 @@ const handleClick = (e: React.MouseEvent) => {
             <span className="text-2xl text-card font-bold transition-opacity duration-1000 ease-out delay-200">+</span>
           </div>
         </div>
-        <div className="flex flex-col gap-4 w-full h- px-10 pt-8 pb-10 text-center">
+        <div className="flex flex-col gap-4 w-full px-16 pt-8 pb-10 text-center">
           <h2 className="text-2xl font-semibold font-display">{heading}</h2>
           <p className="text-muted-foreground">{subheading}</p>
         </div>

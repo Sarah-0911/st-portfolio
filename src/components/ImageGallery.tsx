@@ -43,8 +43,8 @@ const ImageGallery = ({ images, altText = 'Projet' }: ImageGalleryProps) => {
           <button
             key={index}
             onClick={() => setSelectedIndex(index)}
-            className={`h-16 w-24 rounded overflow-hidden border ${
-              index === selectedIndex ? 'border-blue-500' : 'border-transparent'
+            className={`h-16 w-24 rounded overflow-hidden border-2 ${
+              index === selectedIndex ? 'border-primary' : 'border-transparent'
             }`}
           >
             <img

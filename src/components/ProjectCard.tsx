@@ -50,8 +50,8 @@ const handleClick = (e: React.MouseEvent) => {
       <ShadcnCard className="relative m-4 md:m-2 w-80 group overflow-hidden transition duration-300 ease-in-out bg-card rounded-sm">
 
         {category === "perso" &&
-        <div className='absolute left-3 bottom-3 z-10 rounded-full bg-muted px-3 py-1 text-xs font-semibold text-muted-foreground shadow-md'>
-          <p>Projet perso</p>
+        <div className='absolute left-2 bottom-2 z-10 text-xs font-semibold text-muted-foreground'>
+          <p className='bg-primary-soft text-second-gray/70 px-2 py-1 rounded-md'>Projet perso</p>
         </div>}
 
         <div
@@ -70,9 +70,9 @@ const handleClick = (e: React.MouseEvent) => {
             </span>
           </div>
         </div>
-        <div className="flex flex-col gap-4 w-full px-8 md:px-16 pt-8 pb-10 text-center">
+        <div className={`flex flex-col gap-4 w-full pt-8 ${category === "perso" ? "pb-14" : "pb-10"} text-center`}>
           <h2 className="text-xl md:text-2xl font-semibold font-display">{heading}</h2>
-          <p className="text-muted-foreground">{subheading}</p>
+          <p className="text-second-gray/65 px-8">{subheading}</p>
         </div>
       </ShadcnCard>
 

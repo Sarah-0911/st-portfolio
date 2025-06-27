@@ -1,5 +1,6 @@
 import ImageGallery from "./ImageGallery";
 import type { Project } from '../lib/types';
+import { CircleX } from 'lucide-react';
 
 type ProjectModalProps = {
   onClose: () => void;
@@ -20,20 +21,20 @@ export function ProjectModal({ onClose, isClosing, project }: ProjectModalProps)
       aria-labelledby="modal-title"
     >
       <div
-        className="relative bg-white rounded-lg shadow-lg p-4 md:p-6 m-4 max-w-4xl"
+        className="relative bg-card rounded-lg shadow-lg p-6 m-4 max-w-4xl"
         onClick={e => e.stopPropagation()}
       >
-        <h2 id="modal-title" className="text-xl font-semibold mb-4">{heading}</h2>
+        <h2 id="modal-title" className="text-xl font-semibold mb-3 pb-1 font-display tracking-wide border-b">{heading}</h2>
         <div className="flex flex-col md:flex-row gap-6">
             <div className="md:w-[40%] w-full">
               <ImageGallery images={images} altText={altText} />
             </div>
           <div className="md:w-[60%] w-full">
-            <p className="text-sm mb-4">{description}</p>
+            <p className="text-sm mb-4 italic">{description}</p>
             <h3 className="mt-2 mb-1 text-sm md:text-base font-semibold">Technologies</h3>
             <ul className="flex flex-wrap gap-2 text-xs md:text-sm">
               {technologies?.map((tech, index) => (
-                <li key={index} className="border border-slate-300 rounded px-2 py-1">{tech}</li>
+                <li key={index} className=" bg-card-yellow text-foreground text-xs rounded-full px-2 py-1">{tech}</li>
               ))}
             </ul>
             <h3 className="mt-4 mb-1 text-sm md:text-base font-semibold">Ce que j'ai réalisé</h3>
@@ -47,7 +48,7 @@ export function ProjectModal({ onClose, isClosing, project }: ProjectModalProps)
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-4 px-4 py-2 bg-blue-600 text-white text-xs md:text-sm rounded hover:bg-blue-700 transition-colors duration-200"
+                className="inline-block mt-4 px-4 py-2 bg-primary text-background text-xs md:text-sm rounded hover:bg-primary/90 transition-colors duration-200"
               >
                 Voir le site
               </a>
@@ -55,10 +56,10 @@ export function ProjectModal({ onClose, isClosing, project }: ProjectModalProps)
           </div>
         </div>
         <button
-          onClick={onClose}
-          className="absolute top-2 right-2 bg-red-600 rounded-full text-white px-2 py-1 hover:bg-red-700 text-xs"
+        onClick={onClose}
+        className="absolute top-2 right-2 px-1 py-1"
         >
-          X
+          <CircleX className="text-foreground" />
         </button>
       </div>
     </div>

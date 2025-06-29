@@ -19,24 +19,22 @@ const [isClosing, setIsClosing] = useState(false);
 const { heading, subheading, images, altText, category } = project;
 
 const handleClick = (e: React.MouseEvent) => {
-  setModalOpen(true);
+  setIsPreloading(true);
 
-  // setIsPreloading(true);
-
-  // Promise.all(
-  //   images.map(
-  //     (src) =>
-  //       new Promise<void>((resolve, reject) => {
-  //         const img = new Image();
-  //         img.src = src;
-  //         img.onload = () => resolve();
-  //         img.onerror = () => resolve(); // ou reject() si je veux bloquer
-  //       })
-  //   )
-  // ).then(() => {
-  //   setIsPreloading(false);
-  //   setModalOpen(true);
-  // });
+  Promise.all(
+    images.map(
+      (src) =>
+        new Promise<void>((resolve) => {
+          const img = new Image();
+          img.src = src;
+          img.onload = () => resolve();
+          img.onerror = () => resolve();
+        })
+    )
+  ).then(() => {
+    setIsPreloading(false);
+    setModalOpen(true);
+  });
 };
 
   const closeModal = () => {

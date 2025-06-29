@@ -33,7 +33,7 @@ const ImageGallery = ({ images, altText = 'Projet' }: ImageGalleryProps) => {
       <img
         src={images[selectedIndex]}
         alt={`${altText} ${selectedIndex + 1}`}
-        className="w-full h-60 rounded-lg object-cover cursor-zoom-in"
+        className=" w-[80%] mx-auto h-40 md:w-full md:h-60 rounded-lg object-cover cursor-zoom-in"
         onClick={openZoom}
       />
 

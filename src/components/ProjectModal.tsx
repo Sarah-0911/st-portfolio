@@ -21,7 +21,7 @@ export function ProjectModal({ onClose, isClosing, project }: ProjectModalProps)
       aria-labelledby="modal-title"
     >
       <div
-        className="relative bg-card rounded-lg shadow-lg p-6 m-4 max-w-4xl"
+        className="relative bg-card rounded-lg shadow-lg p-6 mx-4 mt-16 max-w-4xl"
         onClick={e => e.stopPropagation()}
       >
         <h2 id="modal-title" className="text-xl font-semibold mb-3 pb-1 font-display tracking-wide border-b">{heading}</h2>

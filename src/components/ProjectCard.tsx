@@ -65,11 +65,11 @@ const handleClick = (e: React.MouseEvent) => {
             loading="eager"
           />
           {/* Overlay */}
-          <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-card-foreground/40 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+          {/* <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-card-foreground/40 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
             <span className="pointer-events-none text-2xl text-card font-bold transition-opacity duration-1000 ease-out delay-200">
               <Eye />
             </span>
-          </div>
+          </div> */}
         </div>
         <div className={`flex flex-col gap-4 w-full pt-8 ${category === "perso" ? "pb-14" : "pb-10"} text-center`}>
           <h2 className="text-xl md:text-2xl font-semibold font-display">{heading}</h2>

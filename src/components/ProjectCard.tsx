@@ -47,7 +47,8 @@ const handleClick = (e: React.MouseEvent) => {
 
   return (
     <>
-      <ShadcnCard className="relative m-4 md:m-2 w-80 group overflow-hidden transition duration-300 ease-in-out bg-card rounded-sm">
+      <ShadcnCard
+        className="relative m-4 md:m-2 w-80 group overflow-hidden transition duration-300 ease-in-out bg-card rounded-sm">
 
         {category === "perso" &&
         <div className='absolute left-2 bottom-2 z-10 text-xs font-semibold text-muted-foreground'>
@@ -55,17 +56,17 @@ const handleClick = (e: React.MouseEvent) => {
         </div>}
 
         <div
-          onClick={handleClick}
           className="h-56 w-full transition-transform duration-700 ease-out group-hover:scale-x-100 cursor-pointer">
           <img
             src={images[0]}
             alt={altText}
+            onClick={handleClick}
             className="h-full w-full object-cover"
             loading="eager"
           />
           {/* Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center bg-card-foreground/40 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
-            <span className="text-2xl text-card font-bold transition-opacity duration-1000 ease-out delay-200">
+          <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-card-foreground/40 translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100">
+            <span className="pointer-events-none text-2xl text-card font-bold transition-opacity duration-1000 ease-out delay-200">
               <Eye />
             </span>
           </div>

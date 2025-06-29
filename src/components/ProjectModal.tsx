@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import ImageGallery from "./ImageGallery";
 import type { Project } from '../lib/types';
 import { CircleX } from 'lucide-react';
@@ -10,6 +11,14 @@ type ProjectModalProps = {
 
 export function ProjectModal({ onClose, isClosing, project }: ProjectModalProps) {
 
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, []);
+
   const { heading, description, altText, images, technologies, features, href } = project;
 
   return (
@@ -21,7 +30,7 @@ export function ProjectModal({ onClose, isClosing, project }: ProjectModalProps)
       aria-labelledby="modal-title"
     >
       <div
-        className="relative bg-card rounded-lg shadow-lg p-6 mx-4 mt-16 max-w-4xl"
+        className="relative bg-card rounded-lg shadow-lg p-6 mx-4 mt-16 md:mt-12 max-w-4xl max-h-[90%] overflow-auto"
         onClick={e => e.stopPropagation()}
       >
         <h2 id="modal-title" className="text-xl font-semibold mb-3 pb-1 font-display tracking-wide border-b">{heading}</h2>

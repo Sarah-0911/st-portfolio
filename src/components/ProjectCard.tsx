@@ -56,11 +56,11 @@ const handleClick = (e: React.MouseEvent) => {
         </div>}
 
         <div
+          onClick={handleClick}
           className="h-56 w-full transition-transform duration-700 ease-out group-hover:scale-x-100 cursor-pointer">
           <img
             src={images[0]}
             alt={altText}
-            onClick={handleClick}
             className="h-full w-full object-cover"
             loading="eager"
           />

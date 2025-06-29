@@ -14,9 +14,10 @@ interface Props {
   titleClass?: string
   padBottom?: boolean
   smallPadding?: boolean
+  orderClass?: string
 }
 
-const { title, body, colSpan, rowSpan, href, textColor, bgColor, titleClass, padBottom, smallPadding } = Astro.props
+const { title, body, colSpan, rowSpan, href, textColor, bgColor, titleClass, padBottom, smallPadding, orderClass } = Astro.props
 ---
 
 <ShadcnCard
@@ -27,7 +28,9 @@ const { title, body, colSpan, rowSpan, href, textColor, bgColor, titleClass, pad
   ${textColor}
   ${colSpan || 'md:col-span-2'}
   ${rowSpan || ''}
-  ${href ? 'cursor-pointer hover:outline hover:outline-2 hover:outline-primary duration-200' : ''}`}
+  ${href ? 'cursor-pointer hover:outline hover:outline-2 hover:outline-primary duration-200' : ''}
+  ${orderClass}
+  `}
 >
   {
     href ? (

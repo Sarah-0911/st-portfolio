@@ -3,7 +3,7 @@ import Card from '../Card.astro'
 import { LINKS } from '../../lib/constants'
 import { Button } from '../ui/button'
 import Tooltip from '../Tooltip.jsx'
-import { Linkedin, Github, Mail, Smile } from 'lucide-react'
+import { Linkedin, Github, Mail, Bot } from 'lucide-react'
 
 ---
 
@@ -48,7 +48,7 @@ import { Linkedin, Github, Mail, Smile } from 'lucide-react'
         </a>
         <Tooltip client:load>
           <Button>
-            <Smile />
+            <Bot />
             <span class="sr-only">Easter Egg</span>
           </Button>
         </Tooltip>

@@ -15,56 +15,60 @@ import Card from '../Card.astro'
     <div class="space-y-3">
       <h3 class="text-foreground font-bold text-lg border-l-4 border-primary pl-4">Stack Principal</h3>
       <div class="grid grid-cols-2 gap-2">
-        <div class="flex items-center justify-center py-3 px-4 rounded-lg bg-primary/5 border border-primary/20 font-semibold text-primary hover:bg-primary/10 transition-colors duration-200">
-          JavaScript
-        </div>
-        <div class="flex items-center justify-center py-3 px-4 rounded-lg bg-primary/5 border border-primary/20 font-semibold text-primary hover:bg-primary/10 transition-colors duration-200">
-          TypeScript
-        </div>
-        <div class="flex items-center justify-center py-3 px-4 rounded-lg bg-primary/5 border border-primary/20 font-semibold text-primary hover:bg-primary/10 transition-colors duration-200">
+        <div class="flex items-center justify-center py-3 px-4 rounded-lg bg-muted/90 text-foreground font-medium text-sm border-2 border-border/80 hover:bg-muted hover:border-border transition-all shadow-sm">
           React
         </div>
-        <div class="flex items-center justify-center py-3 px-4 rounded-lg bg-primary/5 border border-primary/20 font-semibold text-primary hover:bg-primary/10 transition-colors duration-200">
+        <div class="flex items-center justify-center py-3 px-4 rounded-lg bg-muted/90 text-foreground font-medium text-sm border-2 border-border/80 hover:bg-muted hover:border-border transition-all shadow-sm">
           Next.js
         </div>
+        <div class="flex items-center justify-center py-3 px-4 rounded-lg bg-muted/90 text-foreground font-medium text-sm border-2 border-border/80 hover:bg-muted hover:border-border transition-all shadow-sm">
+          JavaScript
+        </div>
+        <div class="flex items-center justify-center py-3 px-4 rounded-lg bg-muted/90 text-foreground font-medium text-sm border-2 border-border/80 hover:bg-muted hover:border-border transition-all shadow-sm">
+          TypeScript
+        </div>
       </div>
-    </div>
-
-    <!-- Technologies complémentaires -->
-    <div class="space-y-4">
-      <h3 class="text-foreground font-bold text-lg border-l-4 border-primary pl-4">Technologies Complémentaires</h3>
-      <div class="flex flex-wrap gap-2">
-        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
+      <div class="flex flex-wrap gap-2 mt-3">
+        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/70 text-foreground font-medium text-sm border border-border/60 hover:bg-muted/80 hover:border-border transition-all">
           React Native
         </span>
-        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
+        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/70 text-foreground font-medium text-sm border border-border/60 hover:bg-muted/80 hover:border-border transition-all">
           Astro
         </span>
-        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
+        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/70 text-foreground font-medium text-sm border border-border/60 hover:bg-muted/80 hover:border-border transition-all">
           HTML5
         </span>
-        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
+        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/70 text-foreground font-medium text-sm border border-border/60 hover:bg-muted/80 hover:border-border transition-all">
           CSS3
         </span>
       </div>
     </div>
 
+
     <!-- Design & Outils -->
     <div class="space-y-4">
       <h3 class="text-foreground font-bold text-lg border-l-4 border-primary pl-4">Design & Outils</h3>
       <div class="flex flex-wrap gap-2">
-        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
-          Tailwind CSS
-        </span>
-        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
-          Figma
-        </span>
-        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
-          Git / GitHub
-        </span>
-        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
-          WordPress
-        </span>
+        <div class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border-2 border-border/70 hover:bg-muted hover:border-border transition-all">
+          <span>Tailwind CSS</span>
+          <span class="ml-2 px-1.5 py-0.5 text-xs rounded bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200">CSS</span>
+        </div>
+        <div class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border-2 border-border/70 hover:bg-muted hover:border-border transition-all">
+          <span>Shadcn/ui</span>
+          <span class="ml-2 px-1.5 py-0.5 text-xs rounded bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200">UI</span>
+        </div>
+        <div class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border-2 border-border/70 hover:bg-muted hover:border-border transition-all">
+          <span>Figma</span>
+          <span class="ml-2 px-1.5 py-0.5 text-xs rounded bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200">Design</span>
+        </div>
+        <div class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border-2 border-border/70 hover:bg-muted hover:border-border transition-all">
+          <span>Git / GitHub</span>
+          <span class="ml-2 px-1.5 py-0.5 text-xs rounded bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200">VCS</span>
+        </div>
+        <div class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border-2 border-border/70 hover:bg-muted hover:border-border transition-all">
+          <span>WordPress</span>
+          <span class="ml-2 px-1.5 py-0.5 text-xs rounded bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200">CMS</span>
+        </div>
       </div>
     </div>
 

@@ -1,9 +1,7 @@
 ---
 import Card from '../Card.astro'
 import { LINKS } from '../../lib/constants'
-import { Button } from '../ui/button'
-import Tooltip from '../Tooltip.jsx'
-import { Linkedin, Github, Mail, Bot } from 'lucide-react'
+import { Linkedin, Github, Mail } from 'lucide-react'
 
 ---
 
@@ -23,35 +21,36 @@ import { Linkedin, Github, Mail, Bot } from 'lucide-react'
     aria-hidden="true"
     >
   </div>
-  <div class="relative z-10 flex flex-col items-center pt-12 sm:pt-16 gap-4">
-      <h2 class="text-second-gray italic sm:pb-6">Me contacter</h2>
-      <div class="flex gap-4">
-        <a class="hover:animate-wiggle-x" href={LINKS.mail} aria-label="mail profile" target="_blank">
-          <Button>
-            <Mail />
+  <div class="relative z-10 flex flex-col items-center pt-12 sm:pt-16 gap-6">
+      <div class="flex flex-col gap-6 mt-4">
+        <div class="flex gap-4">
+          <a class="group hover:animate-wiggle-x" href={LINKS.mail} aria-label="mail profile" target="_blank">
+            <div class="relative w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary via-primary to-primary/80 rounded-xl shadow-lg shadow-primary/25 flex items-center justify-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/40 active:scale-95">
+              <div class="absolute inset-0.5 bg-gradient-to-br from-white/20 to-transparent rounded-xl"></div>
+              <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow-sm relative z-10" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl"></div>
+            </div>
             <span class="sr-only">Contact email</span>
-          </Button>
-        </a>
-        <a class="hover:animate-wiggle-x" href={LINKS.linkedin} aria-label="linkedin profile" target="_blank">
-          <Button>
-            <Linkedin />
+          </a>
+          <a class="group hover:animate-wiggle-x" href={LINKS.linkedin} aria-label="linkedin profile" target="_blank">
+            <div class="relative w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary via-primary to-primary/80 rounded-xl shadow-lg shadow-primary/25 flex items-center justify-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/40 active:scale-95">
+              <div class="absolute inset-0.5 bg-gradient-to-br from-white/20 to-transparent rounded-xl"></div>
+              <Linkedin className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow-sm relative z-10" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl"></div>
+            </div>
             <span class="sr-only">Profil Linkedin</span>
-          </Button>
-        </a>
-      </div>
-      <div class="flex gap-4">
-        <a class="hover:animate-wiggle-x" href={LINKS.github} aria-label="github profile" target="_blank">
-          <Button>
-            <Github />
+          </a>
+        </div>
+        <div class="flex justify-center">
+          <a class="group hover:animate-wiggle-x" href={LINKS.github} aria-label="github profile" target="_blank">
+            <div class="relative w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-br from-primary via-primary to-primary/80 rounded-xl shadow-lg shadow-primary/25 flex items-center justify-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-primary/40 active:scale-95">
+              <div class="absolute inset-0.5 bg-gradient-to-br from-white/20 to-transparent rounded-xl"></div>
+              <Github className="w-5 h-5 sm:w-6 sm:h-6 text-white drop-shadow-sm relative z-10" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/10 to-transparent rounded-xl"></div>
+            </div>
             <span class="sr-only">Profil GitHub</span>
-          </Button>
-        </a>
-        <Tooltip client:load>
-          <Button>
-            <Bot />
-            <span class="sr-only">Easter Egg</span>
-          </Button>
-        </Tooltip>
+          </a>
+        </div>
       </div>
     </div>
   </div>

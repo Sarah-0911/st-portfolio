@@ -7,44 +7,65 @@ import Card from '../Card.astro'
   rowSpan="md:row-span-6"
   title="Mes Compétences"
   titleClass="mb-6"
-  bgColor="bg-pale-orange"
+  bgColor="bg-card"
   orderClass="order-2 md:order-none"
   >
-  <div class="flex flex-col gap-4 text-sm mt-4">
-    <div>
-      <p class="w-fit bg-dark-green text-card font-semibold rounded-full px-3 py-1 mb-2">Front-End Frameworks</p>
-      <ul class="list-inside list-disc ml-2">
-        <li>React</li>
-        <li>Vue.js</li>
-        <li>React Native</li>
-        <li>Astro</li>
-      </ul>
+  <div class="space-y-8 mt-6">
+    <!-- Stack principal -->
+    <div class="space-y-3">
+      <h3 class="text-foreground font-bold text-lg border-l-4 border-primary pl-4">Stack Principal</h3>
+      <div class="grid grid-cols-2 gap-2">
+        <div class="flex items-center justify-center py-3 px-4 rounded-lg bg-primary/5 border border-primary/20 font-semibold text-primary hover:bg-primary/10 transition-colors duration-200">
+          JavaScript
+        </div>
+        <div class="flex items-center justify-center py-3 px-4 rounded-lg bg-primary/5 border border-primary/20 font-semibold text-primary hover:bg-primary/10 transition-colors duration-200">
+          TypeScript
+        </div>
+        <div class="flex items-center justify-center py-3 px-4 rounded-lg bg-primary/5 border border-primary/20 font-semibold text-primary hover:bg-primary/10 transition-colors duration-200">
+          React
+        </div>
+        <div class="flex items-center justify-center py-3 px-4 rounded-lg bg-primary/5 border border-primary/20 font-semibold text-primary hover:bg-primary/10 transition-colors duration-200">
+          Next.js
+        </div>
+      </div>
     </div>
 
-    <div>
-      <p class="w-fit bg-dark-green text-card font-semibold rounded-full px-3 py-1 mb-2">Langages & standards</p>
-      <ul class="list-inside list-disc ml-2">
-        <li>JavaScript (ES6+)</li>
-        <li>TypeScript</li>
-        <li>HTML5</li>
-        <li>CSS3</li>
-      </ul>
+    <!-- Technologies complémentaires -->
+    <div class="space-y-4">
+      <h3 class="text-foreground font-bold text-lg border-l-4 border-primary pl-4">Technologies Complémentaires</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
+          React Native
+        </span>
+        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
+          Astro
+        </span>
+        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
+          HTML5
+        </span>
+        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
+          CSS3
+        </span>
+      </div>
     </div>
 
-    <div>
-      <p class="w-fit bg-card-foreground bg-dark-green text-card font-semibold rounded-full px-3 py-1 mb-2">UI & Design</p>
-      <ul class="list-inside list-disc ml-2">
-        <li>Tailwind CSS</li>
-        <li>Figma</li>
-      </ul>
-    </div>
-
-    <div>
-      <p class="w-fit bg-card-foreground bg-dark-green text-card font-semibold rounded-full px-3 py-1 mb-2">Outils & CMS</p>
-      <ul class="list-inside list-disc ml-2">
-        <li>Git / GitHub</li>
-        <li>WordPress</li>
-      </ul>
+    <!-- Design & Outils -->
+    <div class="space-y-4">
+      <h3 class="text-foreground font-bold text-lg border-l-4 border-primary pl-4">Design & Outils</h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
+          Tailwind CSS
+        </span>
+        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
+          Figma
+        </span>
+        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
+          Git / GitHub
+        </span>
+        <span class="inline-flex items-center px-3 py-1.5 rounded-md bg-muted/80 text-foreground font-medium text-sm border border-border/50 hover:bg-muted transition-colors">
+          WordPress
+        </span>
+      </div>
     </div>
 
   </div>
